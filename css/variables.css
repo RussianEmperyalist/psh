@@ -1,0 +1,27 @@
+/* Переменные тем и цветов */
+:root {
+  --bg: #f6f7f9;
+  --pn: #fff;
+  --tx: #14181f;
+  --mu: #667085;
+  --bd: #e3e6eb;
+  --ac: #2f5bea;
+  --as: #e8eefe;
+  --ok: #12803c;
+  --tb: #0a0e14;
+  --tt: #cfdbe9;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0b0e13;
+    --pn: #12161d;
+    --tx: #e6e9ee;
+    --mu: #8a93a2;
+    --bd: #222833;
+    --ac: #7aa2ff;
+    --as: #16213d;
+    --ok: #4ade80;
+    --tb: #06080c;
+  }
+}

@@ -1,0 +1,10 @@
+/* Ссылки в шапке и мобильное меню страниц */
+a.lg{color:inherit;text-decoration:none}
+.pages{margin-top:18px;padding-top:12px;border-top:1px solid var(--bd)}
+.pages a{display:block;padding:7px 8px;border-radius:8px;color:var(--mu);text-decoration:none;font-size:14px}
+.pages a:hover{background:var(--as);color:var(--tx)}
+header .pg{margin-left:auto}
+header .nav-menu{margin-left:0}
+.hero .terminal-deco{max-width:100%;overflow-x:auto;white-space:nowrap}
+@media (min-width:1000px){.pages{display:none}}
+@media (max-width:999px){#pc{display:none}header .pg{max-width:none}}

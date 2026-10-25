@@ -1,0 +1,1931 @@
+(() => {
+  // js/course/course-data.js
+  var courseModules = [
+    {
+      name: "\u041E\u0441\u043D\u043E\u0432\u044B",
+      level: "\u041D\u043E\u0432\u0438\u0447\u043E\u043A",
+      lessons: [
+        {
+          t: "\u041A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442\u044B \u0438 \u0441\u043F\u0440\u0430\u0432\u043A\u0430",
+          th: "\u041A\u043E\u043C\u0430\u043D\u0434\u044B PowerShell \u043D\u0430\u0437\u044B\u0432\u0430\u044E\u0442\u0441\u044F <b>\u043A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442\u0430\u043C\u0438</b> \u0438 \u0441\u0442\u0440\u043E\u044F\u0442\u0441\u044F \u043F\u043E \u0441\u0445\u0435\u043C\u0435 <code>\u0413\u043B\u0430\u0433\u043E\u043B-\u0421\u0443\u0449\u0435\u0441\u0442\u0432\u0438\u0442\u0435\u043B\u044C\u043D\u043E\u0435</code>: Get-Process, Stop-Service, New-Item. \u0420\u0435\u0433\u0438\u0441\u0442\u0440 \u043D\u0435 \u0432\u0430\u0436\u0435\u043D. \u0422\u0440\u0438 \u0433\u043B\u0430\u0432\u043D\u044B\u0445 \u043F\u043E\u043C\u043E\u0449\u043D\u0438\u043A\u0430: <code>Get-Command</code> \u2014 \u0447\u0442\u043E \u0432\u043E\u043E\u0431\u0449\u0435 \u0435\u0441\u0442\u044C, <code>Get-Help</code> \u2014 \u043A\u0430\u043A \u044D\u0442\u0438\u043C \u043F\u043E\u043B\u044C\u0437\u043E\u0432\u0430\u0442\u044C\u0441\u044F, <code>Get-Member</code> \u2014 \u043A\u0430\u043A\u0438\u0435 \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0430 \u0443 \u043E\u0431\u044A\u0435\u043A\u0442\u0430. \u041E\u0441\u0432\u043E\u0438\u0432 \u0438\u0445, \u0432\u044B \u0440\u0430\u0437\u0431\u0435\u0440\u0451\u0442\u0435\u0441\u044C \u0441 \u043B\u044E\u0431\u043E\u0439 \u043D\u0435\u0437\u043D\u0430\u043A\u043E\u043C\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u043E\u0439 \u0441\u0430\u043C\u0438.",
+          ex: ["Get-Command", "Get-Command Get-*", "Get-Help Get-Process", "Get-Process | Get-Member"],
+          task: "\u041F\u043E\u043B\u0443\u0447\u0438\u0442\u0435 \u0441\u043F\u0440\u0430\u0432\u043A\u0443 \u043F\u043E \u043A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442\u0443 Get-Service \u0441 \u043F\u043E\u043C\u043E\u0449\u044C\u044E Get-Help.",
+          h: "Get-Help Get-Service",
+          ok: /get-help\s+get-service/i
+        },
+        {
+          t: "\u041A\u043E\u043D\u0432\u0435\u0439\u0435\u0440 \u0438 \u043E\u0431\u044A\u0435\u043A\u0442\u044B",
+          th: "\u0413\u043B\u0430\u0432\u043D\u0430\u044F \u0438\u0434\u0435\u044F PowerShell: \u043F\u043E \u043A\u043E\u043D\u0432\u0435\u0439\u0435\u0440\u0443 <code>|</code> \u043F\u0435\u0440\u0435\u0434\u0430\u044E\u0442\u0441\u044F <b>\u043E\u0431\u044A\u0435\u043A\u0442\u044B</b>, \u0430 \u043D\u0435 \u0442\u0435\u043A\u0441\u0442. \u0423 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u0430 \u0435\u0441\u0442\u044C \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0430 Name, Id, CPU \u2014 \u043F\u043E \u043D\u0438\u043C \u043C\u043E\u0436\u043D\u043E \u0441\u043E\u0440\u0442\u0438\u0440\u043E\u0432\u0430\u0442\u044C \u0438 \u0432\u044B\u0431\u0438\u0440\u0430\u0442\u044C \u0431\u0435\u0437 \u0440\u0430\u0437\u0431\u043E\u0440\u0430 \u0441\u0442\u0440\u043E\u043A, \u043A\u0430\u043A \u0432 bash. <code>Sort-Object</code> \u0441\u043E\u0440\u0442\u0438\u0440\u0443\u0435\u0442, <code>Select-Object</code> \u0432\u044B\u0431\u0438\u0440\u0430\u0435\u0442 \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0430 \u0438 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E.",
+          ex: ["Get-Process | Sort-Object CPU -Descending", "Get-Process | Select-Object Name,Id -First 3"],
+          task: "\u0412\u044B\u0432\u0435\u0434\u0438\u0442\u0435 3 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u0430 \u0441 \u043D\u0430\u0438\u0431\u043E\u043B\u044C\u0448\u0435\u0439 \u0437\u0430\u0433\u0440\u0443\u0437\u043A\u043E\u0439 CPU: Sort-Object \u043F\u043E \u0443\u0431\u044B\u0432\u0430\u043D\u0438\u044E, \u0437\u0430\u0442\u0435\u043C Select-Object -First 3.",
+          h: "Get-Process | Sort-Object CPU -Descending | Select-Object -First 3",
+          ok: /sort(-object)?[^|\n]*\|\s*select(-object)?[^|\n]*first\s+3/i
+        },
+        {
+          t: "\u0424\u0438\u043B\u044C\u0442\u0440\u0430\u0446\u0438\u044F",
+          th: "<code>Where-Object</code> \u043E\u0441\u0442\u0430\u0432\u043B\u044F\u0435\u0442 \u0442\u043E\u043B\u044C\u043A\u043E \u043F\u043E\u0434\u0445\u043E\u0434\u044F\u0449\u0438\u0435 \u043E\u0431\u044A\u0435\u043A\u0442\u044B. \u0412 \u0431\u043B\u043E\u043A\u0435 <code>{ }</code> \u0442\u0435\u043A\u0443\u0449\u0438\u0439 \u043E\u0431\u044A\u0435\u043A\u0442 \u2014 \u044D\u0442\u043E <code>$_</code>. \u041E\u043F\u0435\u0440\u0430\u0442\u043E\u0440\u044B \u0441\u0440\u0430\u0432\u043D\u0435\u043D\u0438\u044F: <code>-eq -ne -gt -lt -ge -le -like -match</code>, \u043B\u043E\u0433\u0438\u043A\u0430 \u2014 <code>-and -or -not</code>. \u0417\u043D\u0430\u043A\u0438 == \u0438 &gt; \u0437\u0434\u0435\u0441\u044C \u043D\u0435 \u0440\u0430\u0431\u043E\u0442\u0430\u044E\u0442.",
+          ex: ['Get-Service | Where-Object { $_.Status -eq "Running" }', 'Get-Process | Where-Object { $_.Name -like "s*" }'],
+          task: "\u041F\u043E\u043A\u0430\u0436\u0438\u0442\u0435 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B, \u0443 \u043A\u043E\u0442\u043E\u0440\u044B\u0445 CPU \u0431\u043E\u043B\u044C\u0448\u0435 50.",
+          h: "Get-Process | Where-Object { $_.CPU -gt 50 }",
+          ok: /where(-object)?\s*(\{[^}]*cpu\s*-gt|cpu\s+-gt)/i
+        },
+        {
+          t: "\u041F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u0438 \u043C\u0430\u0441\u0441\u0438\u0432\u044B",
+          th: "\u041F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u044B\u0435 \u043D\u0430\u0447\u0438\u043D\u0430\u044E\u0442\u0441\u044F \u0441 <code>$</code>. \u0412 \u0441\u0442\u0440\u043E\u043A\u0430\u0445 \u0441 \u0434\u0432\u043E\u0439\u043D\u044B\u043C\u0438 \u043A\u0430\u0432\u044B\u0447\u043A\u0430\u043C\u0438 \u043E\u043D\u0438 \u043F\u043E\u0434\u0441\u0442\u0430\u0432\u043B\u044F\u044E\u0442\u0441\u044F, \u0432 \u043E\u0434\u0438\u043D\u0430\u0440\u043D\u044B\u0445 \u2014 \u043D\u0435\u0442. \u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D <code>1..5</code> \u0441\u043E\u0437\u0434\u0430\u0451\u0442 \u043C\u0430\u0441\u0441\u0438\u0432, \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u043E <code>.Count</code> \u2014 \u0447\u0438\u0441\u043B\u043E \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432, \u0430 <code>ForEach-Object</code> \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0435\u0442 \u0434\u0435\u0439\u0441\u0442\u0432\u0438\u0435 \u0434\u043B\u044F \u043A\u0430\u0436\u0434\u043E\u0433\u043E.",
+          ex: ['$name = "Admin"', '"\u041F\u0440\u0438\u0432\u0435\u0442, $name"', "$nums = 1..5", "$nums | ForEach-Object { $_ * 2 }"],
+          task: "\u0421\u043E\u0445\u0440\u0430\u043D\u0438\u0442\u0435 \u0437\u0430\u043F\u0443\u0449\u0435\u043D\u043D\u044B\u0435 \u0441\u043B\u0443\u0436\u0431\u044B \u0432 \u043F\u0435\u0440\u0435\u043C\u0435\u043D\u043D\u0443\u044E $svc (Where-Object, Status -eq Running), \u0437\u0430\u0442\u0435\u043C \u0432\u044B\u0432\u0435\u0434\u0438\u0442\u0435 $svc.Count.",
+          h: '$svc = Get-Service | Where-Object { $_.Status -eq "Running" }\n$svc.Count',
+          ok: /\$svc\s*=.*running[\s\S]*\$svc\.count/i
+        }
+      ]
+    },
+    {
+      name: "\u0424\u0430\u0439\u043B\u044B \u0438 \u0441\u043A\u0440\u0438\u043F\u0442\u044B",
+      level: "\u0411\u0430\u0437\u043E\u0432\u044B\u0439",
+      lessons: [
+        {
+          t: "\u0424\u0430\u0439\u043B\u044B \u0438 \u043F\u0430\u043F\u043A\u0438",
+          th: "\u0424\u0430\u0439\u043B\u043E\u0432\u0430\u044F \u0441\u0438\u0441\u0442\u0435\u043C\u0430 \u0442\u043E\u0436\u0435 \u0441\u043E\u0441\u0442\u043E\u0438\u0442 \u0438\u0437 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432. <code>Get-ChildItem</code> (ls, dir) \u2014 \u0441\u043F\u0438\u0441\u043E\u043A, <code>Set-Location</code> (cd) \u2014 \u043F\u0435\u0440\u0435\u0445\u043E\u0434, <code>Get-Content</code> (cat) \u2014 \u0447\u0442\u0435\u043D\u0438\u0435, <code>Set-Content</code> \u0438 <code>Add-Content</code> \u2014 \u0437\u0430\u043F\u0438\u0441\u044C, <code>New-Item</code> \u0438 <code>Remove-Item</code> \u2014 \u0441\u043E\u0437\u0434\u0430\u043D\u0438\u0435 \u0438 \u0443\u0434\u0430\u043B\u0435\u043D\u0438\u0435. \u041A\u043B\u044E\u0447 <code>-Recurse</code> \u043E\u0431\u0445\u043E\u0434\u0438\u0442 \u0432\u043B\u043E\u0436\u0435\u043D\u043D\u044B\u0435 \u043F\u0430\u043F\u043A\u0438.",
+          ex: ["Get-ChildItem", "Get-Content Documents\\notes.txt", "Get-ChildItem -Recurse", "New-Item Scripts\\test.ps1"],
+          task: "\u0421\u043E\u0437\u0434\u0430\u0439\u0442\u0435 \u0444\u0430\u0439\u043B hello.txt \u0441 \u043B\u044E\u0431\u044B\u043C \u0442\u0435\u043A\u0441\u0442\u043E\u043C (Set-Content) \u0438 \u0432\u044B\u0432\u0435\u0434\u0438\u0442\u0435 \u0435\u0433\u043E \u0447\u0435\u0440\u0435\u0437 Get-Content.",
+          h: 'Set-Content hello.txt -Value "\u041F\u0440\u0438\u0432\u0435\u0442"\nGet-Content hello.txt',
+          ok: /(set-content|add-content|new-item)[^\n]*hello\.txt[\s\S]*(get-content|cat|type|gc)\s[^\n]*hello\.txt/i
+        },
+        {
+          t: "\u0423\u0441\u043B\u043E\u0432\u0438\u044F \u0438 \u0446\u0438\u043A\u043B\u044B",
+          th: "\u0426\u0438\u043A\u043B <code>foreach ($x in \u043A\u043E\u043B\u043B\u0435\u043A\u0446\u0438\u044F) { ... }</code> \u0438 \u0443\u0441\u043B\u043E\u0432\u0438\u0435 <code>if (...) { ... } else { ... }</code> \u2014 \u043E\u0441\u043D\u043E\u0432\u0430 \u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432: \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438, \u043E\u0431\u0445\u043E\u0434 \u0444\u0430\u0439\u043B\u043E\u0432, \u043C\u0430\u0441\u0441\u043E\u0432\u044B\u0435 \u043E\u043F\u0435\u0440\u0430\u0446\u0438\u0438. \u041D\u0435\u0441\u043A\u043E\u043B\u044C\u043A\u043E \u043A\u043E\u043C\u0430\u043D\u0434 \u0432 \u0441\u0442\u0440\u043E\u043A\u0435 \u0440\u0430\u0437\u0434\u0435\u043B\u044F\u044E\u0442\u0441\u044F <code>;</code>.",
+          ex: ['foreach ($i in 1..3) { Write-Host "\u0428\u0430\u0433 $i" }', 'if (5 -gt 3) { "\u0434\u0430" } else { "\u043D\u0435\u0442" }', "foreach ($p in Get-Process) { if ($p.CPU -gt 100) { $p.Name } }"],
+          task: "\u0412\u044B\u0432\u0435\u0434\u0438\u0442\u0435 \u0447\u0438\u0441\u043B\u0430 \u043E\u0442 1 \u0434\u043E 5 \u0446\u0438\u043A\u043B\u043E\u043C foreach.",
+          h: "foreach ($i in 1..5) { $i }",
+          ok: /foreach\s*\(\s*\$\w+\s+in\s+1\.\.5/i
+        },
+        {
+          t: "\u041F\u043E\u0438\u0441\u043A \u043F\u043E \u0442\u0435\u043A\u0441\u0442\u0443 \u0438 \u043B\u043E\u0433\u0430\u043C",
+          th: "<code>Select-String</code> \u2014 \u0430\u043D\u0430\u043B\u043E\u0433 grep: \u0438\u0449\u0435\u0442 \u0441\u0442\u0440\u043E\u043A\u0438 \u043F\u043E \u0448\u0430\u0431\u043B\u043E\u043D\u0443 (\u0440\u0435\u0433\u0443\u043B\u044F\u0440\u043D\u043E\u043C\u0443 \u0432\u044B\u0440\u0430\u0436\u0435\u043D\u0438\u044E) \u0432 \u0444\u0430\u0439\u043B\u0430\u0445 \u0438\u043B\u0438 \u0432 \u0442\u0435\u043A\u0441\u0442\u0435 \u0438\u0437 \u043A\u043E\u043D\u0432\u0435\u0439\u0435\u0440\u0430. \u042D\u0442\u043E \u043E\u0441\u043D\u043E\u0432\u0430 \u0440\u0430\u0437\u0431\u043E\u0440\u0430 \u043B\u043E\u0433\u043E\u0432: \u043E\u0448\u0438\u0431\u043A\u0438, \u043F\u0440\u0435\u0434\u0443\u043F\u0440\u0435\u0436\u0434\u0435\u043D\u0438\u044F, \u043F\u043E\u0434\u043E\u0437\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0441\u043E\u0431\u044B\u0442\u0438\u044F.",
+          ex: ["Get-Content Documents\\Logs\\app.log", 'Select-String -Pattern "ERROR" -Path Documents\\Logs\\app.log', "Get-Content Documents\\Logs\\app.log | Select-String WARN"],
+          task: "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u0432 Documents\\Logs\\app.log \u0441\u0442\u0440\u043E\u043A\u0438 \u0441\u043E \u0441\u043B\u043E\u0432\u043E\u043C ERROR.",
+          h: "Select-String -Pattern ERROR -Path Documents\\Logs\\app.log",
+          ok: /select-string[^\n]*error/i
+        }
+      ]
+    },
+    {
+      name: "\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u0435",
+      level: "\u0421\u0440\u0435\u0434\u043D\u0438\u0439",
+      lessons: [
+        {
+          t: "\u0421\u043B\u0443\u0436\u0431\u044B \u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B",
+          th: "\u0421\u043B\u0443\u0436\u0431\u044B \u2014 \u043E\u0441\u043D\u043E\u0432\u0430 \u0440\u0430\u0431\u043E\u0442\u044B \u0441\u0438\u0441\u0430\u0434\u043C\u0438\u043D\u0430: <code>Get-Service</code>, <code>Start-Service</code>, <code>Stop-Service</code>; \u0434\u043B\u044F \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u043E\u0432 \u2014 <code>Get-Process</code> \u0438 <code>Stop-Process</code>. \u0421 \u0442\u043E\u0447\u043A\u0438 \u0437\u0440\u0435\u043D\u0438\u044F \u0418\u0411 \u043A\u0430\u0436\u0434\u0430\u044F \u043B\u0438\u0448\u043D\u044F\u044F \u0441\u043B\u0443\u0436\u0431\u0430 (Spooler, RemoteRegistry) \u0440\u0430\u0441\u0448\u0438\u0440\u044F\u0435\u0442 \u043F\u043E\u0432\u0435\u0440\u0445\u043D\u043E\u0441\u0442\u044C \u0430\u0442\u0430\u043A\u0438, \u043F\u043E\u044D\u0442\u043E\u043C\u0443 \u043D\u0430 \u0441\u0435\u0440\u0432\u0435\u0440\u0430\u0445 \u0438\u0445 \u043E\u0442\u043A\u043B\u044E\u0447\u0430\u044E\u0442.",
+          ex: ["Get-Service", "Get-Service -Name Spooler", "Stop-Process -Name chrome"],
+          task: "\u041E\u0441\u0442\u0430\u043D\u043E\u0432\u0438\u0442\u0435 \u0441\u043B\u0443\u0436\u0431\u0443 Spooler, \u0437\u0430\u0442\u0435\u043C \u043F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0435\u0451 \u0441\u0442\u0430\u0442\u0443\u0441 \u0447\u0435\u0440\u0435\u0437 Get-Service.",
+          h: "Stop-Service Spooler\nGet-Service Spooler",
+          ok: /stop-service\s+(-name\s+)?spooler[\s\S]*get-service/i
+        },
+        {
+          t: "\u0423\u0447\u0451\u0442\u043D\u044B\u0435 \u0437\u0430\u043F\u0438\u0441\u0438",
+          th: "<code>Get-LocalUser</code> \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u043B\u043E\u043A\u0430\u043B\u044C\u043D\u044B\u0435 \u0443\u0447\u0451\u0442\u043D\u044B\u0435 \u0437\u0430\u043F\u0438\u0441\u0438. \u0410\u0443\u0434\u0438\u0442 \u0443\u0447\u0451\u0442\u043E\u043A \u2014 \u043A\u043B\u0430\u0441\u0441\u0438\u0447\u0435\u0441\u043A\u0430\u044F \u0437\u0430\u0434\u0430\u0447\u0430: \u0447\u0442\u043E \u0432\u043A\u043B\u044E\u0447\u0435\u043D\u043E, \u043A\u0442\u043E \u0434\u0430\u0432\u043D\u043E \u043D\u0435 \u0432\u0445\u043E\u0434\u0438\u043B, \u043A\u0430\u043A\u0438\u0435 \u0442\u0435\u0445\u043D\u0438\u0447\u0435\u0441\u043A\u0438\u0435 \u0430\u043A\u043A\u0430\u0443\u043D\u0442\u044B \u043E\u0441\u0442\u0430\u043B\u0438\u0441\u044C. \u041B\u0438\u0448\u043D\u0438\u0435 \u0432\u043A\u043B\u044E\u0447\u0451\u043D\u043D\u044B\u0435 \u0437\u0430\u043F\u0438\u0441\u0438 \u2014 \u043F\u0440\u044F\u043C\u0430\u044F \u043B\u0430\u0437\u0435\u0439\u043A\u0430 \u0434\u043B\u044F \u0430\u0442\u0430\u043A\u0443\u044E\u0449\u0435\u0433\u043E.",
+          ex: ["Get-LocalUser", "Get-LocalUser | Where-Object { $_.Enabled -eq $true }"],
+          task: "\u0412\u044B\u0432\u0435\u0434\u0438\u0442\u0435 \u0442\u043E\u043B\u044C\u043A\u043E \u0432\u043A\u043B\u044E\u0447\u0451\u043D\u043D\u044B\u0435 \u0443\u0447\u0451\u0442\u043D\u044B\u0435 \u0437\u0430\u043F\u0438\u0441\u0438, \u043E\u0442\u0444\u0438\u043B\u044C\u0442\u0440\u043E\u0432\u0430\u0432 \u043F\u043E \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0443 Enabled.",
+          h: "Get-LocalUser | Where-Object { $_.Enabled -eq $true }",
+          ok: /get-localuser[^\n]*where(-object)?[^\n]*enabled/i
+        },
+        {
+          t: "\u0416\u0443\u0440\u043D\u0430\u043B\u044B \u0441\u043E\u0431\u044B\u0442\u0438\u0439",
+          th: "\u0416\u0443\u0440\u043D\u0430\u043B \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u0438 \u2014 \u0433\u043B\u0430\u0432\u043D\u044B\u0439 \u0438\u0441\u0442\u043E\u0447\u043D\u0438\u043A \u0434\u043B\u044F \u0440\u0430\u0441\u0441\u043B\u0435\u0434\u043E\u0432\u0430\u043D\u0438\u0439. \u041A\u043B\u044E\u0447\u0435\u0432\u044B\u0435 Id: <b>4624</b> \u0443\u0441\u043F\u0435\u0448\u043D\u044B\u0439 \u0432\u0445\u043E\u0434, <b>4625</b> \u043D\u0435\u0443\u0434\u0430\u0447\u043D\u044B\u0439 \u0432\u0445\u043E\u0434 (\u0441\u0435\u0440\u0438\u044F \u2014 \u043F\u0440\u0438\u0437\u043D\u0430\u043A \u043F\u0435\u0440\u0435\u0431\u043E\u0440\u0430 \u043F\u0430\u0440\u043E\u043B\u0435\u0439), <b>4688</b> \u0437\u0430\u043F\u0443\u0441\u043A \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u0430, <b>7045</b> \u0443\u0441\u0442\u0430\u043D\u043E\u0432\u043A\u0430 \u0441\u043B\u0443\u0436\u0431\u044B (\u0447\u0430\u0441\u0442\u044B\u0439 \u0441\u043F\u043E\u0441\u043E\u0431 \u0437\u0430\u043A\u0440\u0435\u043F\u043B\u0435\u043D\u0438\u044F). \u0412 \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0435\u0439 Windows \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F <code>Get-WinEvent</code>.",
+          ex: ["Get-WinEvent -MaxEvents 3", "Get-WinEvent | Where-Object { $_.Id -eq 4625 }", "Get-WinEvent | Group-Object Id"],
+          task: "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u0441\u043E\u0431\u044B\u0442\u0438\u044F 4625 \u0438 \u043F\u043E\u0434\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0438\u0445 \u0447\u0435\u0440\u0435\u0437 Measure-Object.",
+          h: "Get-WinEvent | Where-Object { $_.Id -eq 4625 } | Measure-Object",
+          ok: /4625[^\n]*\|\s*measure/i
+        }
+      ]
+    },
+    {
+      name: "\u0410\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u044F",
+      level: "\u041F\u0440\u043E\u0434\u0432\u0438\u043D\u0443\u0442\u044B\u0439",
+      lessons: [
+        {
+          t: "\u0425\u044D\u0448-\u0442\u0430\u0431\u043B\u0438\u0446\u044B \u0438 \u0441\u0432\u043E\u0438 \u043E\u0431\u044A\u0435\u043A\u0442\u044B",
+          th: '\u0425\u044D\u0448-\u0442\u0430\u0431\u043B\u0438\u0446\u0430 <code>@{ \u041A\u043B\u044E\u0447 = \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435; ... }</code> \u0445\u0440\u0430\u043D\u0438\u0442 \u043F\u0430\u0440\u044B \xAB\u043A\u043B\u044E\u0447 \u2014 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435\xBB. \u0415\u0441\u043B\u0438 \u0434\u043E\u0431\u0430\u0432\u0438\u0442\u044C <code>[PSCustomObject]</code>, \u043F\u043E\u043B\u0443\u0447\u0438\u0442\u0441\u044F \u043F\u043E\u043B\u043D\u043E\u0446\u0435\u043D\u043D\u044B\u0439 \u043E\u0431\u044A\u0435\u043A\u0442 \u2014 \u0442\u0430\u043A \u0441\u043E\u0431\u0438\u0440\u0430\u044E\u0442 \u043E\u0442\u0447\u0451\u0442\u044B \u0438 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u044B \u0430\u0443\u0434\u0438\u0442\u0430. \u0414\u043E\u0441\u0442\u0443\u043F \u043A \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u044E: <code>$h.Port</code> \u0438\u043B\u0438 <code>$h["Port"]</code>.',
+          ex: ['$h = @{ Host = "srv01"; Port = 443 }', "$h.Port", '[PSCustomObject]@{ Name = "srv01"; Risk = "High" }'],
+          task: "\u0421\u043E\u0437\u0434\u0430\u0439\u0442\u0435 \u0445\u044D\u0448-\u0442\u0430\u0431\u043B\u0438\u0446\u0443 $h \u0441 \u043A\u043B\u044E\u0447\u0430\u043C\u0438 Host \u0438 Port, \u0437\u0430\u0442\u0435\u043C \u0432\u044B\u0432\u0435\u0434\u0438\u0442\u0435 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 $h.Port.",
+          h: '$h = @{ Host = "srv01"; Port = 443 }\n$h.Port',
+          ok: /\$h\s*=\s*@\{/i
+        },
+        {
+          t: "\u0424\u0443\u043D\u043A\u0446\u0438\u0438",
+          th: "\u0424\u0443\u043D\u043A\u0446\u0438\u044F \u0443\u043F\u0430\u043A\u043E\u0432\u044B\u0432\u0430\u0435\u0442 \u043F\u043E\u0432\u0442\u043E\u0440\u044F\u044E\u0449\u0438\u0439\u0441\u044F \u043A\u043E\u0434: <code>function \u0418\u043C\u044F($\u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440) { ... }</code>. \u0412\u044B\u0437\u044B\u0432\u0430\u0435\u0442\u0441\u044F \u043A\u0430\u043A \u043E\u0431\u044B\u0447\u043D\u044B\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442: <code>\u0418\u043C\u044F \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435</code>. \u0422\u0430\u043A \u0441\u043E\u0431\u0438\u0440\u0430\u044E\u0442 \u0441\u043E\u0431\u0441\u0442\u0432\u0435\u043D\u043D\u044B\u0435 \u0438\u043D\u0441\u0442\u0440\u0443\u043C\u0435\u043D\u0442\u044B \u2014 \u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440, \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0443 \u0445\u043E\u0441\u0442\u0430 \u0438\u043B\u0438 \u043E\u0442\u0447\u0451\u0442 \u043F\u043E \u0441\u043B\u0443\u0436\u0431\u0430\u043C.",
+          ex: ['function Hello($n) { "\u041F\u0440\u0438\u0432\u0435\u0442, $n" }', "Hello Admin", "function Top($k) { Get-Process | Sort-Object CPU -Descending | Select-Object -First $k }", "Top 2"],
+          task: "\u041E\u0431\u044A\u044F\u0432\u0438\u0442\u0435 \u0444\u0443\u043D\u043A\u0446\u0438\u044E Hello \u0441 \u043F\u0430\u0440\u0430\u043C\u0435\u0442\u0440\u043E\u043C $n, \u043A\u043E\u0442\u043E\u0440\u0430\u044F \u0432\u044B\u0432\u043E\u0434\u0438\u0442 \u043F\u0440\u0438\u0432\u0435\u0442\u0441\u0442\u0432\u0438\u0435, \u0438 \u0432\u044B\u0437\u043E\u0432\u0438\u0442\u0435 \u0435\u0451 \u0441\u043E \u0441\u0432\u043E\u0438\u043C \u0438\u043C\u0435\u043D\u0435\u043C.",
+          h: 'function Hello($n) { "\u041F\u0440\u0438\u0432\u0435\u0442, $n" }\nHello Admin',
+          ok: /function\s+hello/i
+        },
+        {
+          t: "\u041E\u0431\u0440\u0430\u0431\u043E\u0442\u043A\u0430 \u043E\u0448\u0438\u0431\u043E\u043A",
+          th: '<code>try { ... } catch { ... }</code> \u043F\u0435\u0440\u0435\u0445\u0432\u0430\u0442\u044B\u0432\u0430\u0435\u0442 \u043E\u0448\u0438\u0431\u043A\u0438, \u0430 <code>$_</code> \u0432 \u0431\u043B\u043E\u043A\u0435 catch \u043E\u043F\u0438\u0441\u044B\u0432\u0430\u0435\u0442 \u043E\u0448\u0438\u0431\u043A\u0443. <code>finally</code> \u0432\u044B\u043F\u043E\u043B\u043D\u044F\u0435\u0442\u0441\u044F \u0432\u0441\u0435\u0433\u0434\u0430, <code>throw "\u0442\u0435\u043A\u0441\u0442"</code> \u0432\u044B\u0437\u044B\u0432\u0430\u0435\u0442 \u043E\u0448\u0438\u0431\u043A\u0443 \u0432\u0440\u0443\u0447\u043D\u0443\u044E. \u0421\u043A\u0440\u0438\u043F\u0442, \u043A\u043E\u0442\u043E\u0440\u044B\u0439 \u043D\u0435 \u043F\u0430\u0434\u0430\u0435\u0442 \u043E\u0442 \u043F\u0435\u0440\u0432\u043E\u0439 \u0436\u0435 \u043F\u0440\u043E\u0431\u043B\u0435\u043C\u044B, \u2014 \u043F\u0440\u0438\u0437\u043D\u0430\u043A \u0437\u0440\u0435\u043B\u043E\u0439 \u0430\u0432\u0442\u043E\u043C\u0430\u0442\u0438\u0437\u0430\u0446\u0438\u0438.',
+          ex: ['try { Get-Content nofile.txt } catch { "\u041E\u0448\u0438\u0431\u043A\u0430: $_" }', 'try { Get-Service Spooler } catch { "\u043D\u0435\u0442 \u0442\u0430\u043A\u043E\u0439 \u0441\u043B\u0443\u0436\u0431\u044B" } finally { "\u0433\u043E\u0442\u043E\u0432\u043E" }', 'try { throw "\u0422\u0440\u0435\u0432\u043E\u0433\u0430!" } catch { "\u041F\u043E\u0439\u043C\u0430\u043B\u0438: $_" }'],
+          task: "\u041F\u0440\u043E\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u043D\u0435\u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u044E\u0449\u0438\u0439 \u0444\u0430\u0439\u043B \u0432\u043D\u0443\u0442\u0440\u0438 try \u0438 \u043E\u0431\u0440\u0430\u0431\u043E\u0442\u0430\u0439\u0442\u0435 \u043E\u0448\u0438\u0431\u043A\u0443 \u0432 \u0431\u043B\u043E\u043A\u0435 catch.",
+          h: 'try { Get-Content nofile.txt } catch { "\u0424\u0430\u0439\u043B \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D" }',
+          ok: /try\s*\{/i
+        }
+      ]
+    },
+    {
+      name: "\u0411\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u043E\u0441\u0442\u044C",
+      level: "\u041F\u0440\u043E\u0434\u0432\u0438\u043D\u0443\u0442\u044B\u0439",
+      lessons: [
+        {
+          t: "\u041F\u043E\u0434\u043E\u0437\u0440\u0438\u0442\u0435\u043B\u044C\u043D\u044B\u0435 \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F",
+          th: "<code>Get-NetTCPConnection</code> \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F: \u0430\u0434\u0440\u0435\u0441\u0430, \u043F\u043E\u0440\u0442\u044B, \u0441\u043E\u0441\u0442\u043E\u044F\u043D\u0438\u0435 \u0438 <b>OwningProcess</b> \u2014 Id \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u0430-\u0432\u043B\u0430\u0434\u0435\u043B\u044C\u0446\u0430. \u0422\u0430\u043A \u043D\u0430\u0445\u043E\u0434\u044F\u0442 \u043D\u0435\u0441\u0442\u0430\u043D\u0434\u0430\u0440\u0442\u043D\u044B\u0435 \u043F\u043E\u0440\u0442\u044B (4444 \u2014 \u043A\u043B\u0430\u0441\u0441\u0438\u043A\u0430 Metasploit) \u0438 \u043D\u0435\u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0435 \u0432\u043D\u0435\u0448\u043D\u0438\u0435 \u0430\u0434\u0440\u0435\u0441\u0430. \u0412\u044B\u0440\u0430\u0436\u0435\u043D\u0438\u0435 <code>(\u043A\u043E\u043C\u0430\u043D\u0434\u0430).\u0421\u0432\u043E\u0439\u0441\u0442\u0432\u043E</code> \u0434\u043E\u0441\u0442\u0430\u0451\u0442 \u0437\u043D\u0430\u0447\u0435\u043D\u0438\u0435 \u0438\u0437 \u0440\u0435\u0437\u0443\u043B\u044C\u0442\u0430\u0442\u0430 \u0434\u0440\u0443\u0433\u043E\u0439 \u043A\u043E\u043C\u0430\u043D\u0434\u044B.",
+          ex: ["Get-NetTCPConnection", "Get-NetTCPConnection -State Established", "Get-Process -Id (Get-NetTCPConnection -RemotePort 4444).OwningProcess"],
+          task: "\u041D\u0430\u0439\u0434\u0438\u0442\u0435 \u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u0435 \u043D\u0430 \u043F\u043E\u0440\u0442 4444 \u0438 \u043E\u043F\u0440\u0435\u0434\u0435\u043B\u0438\u0442\u0435 \u043F\u0440\u043E\u0446\u0435\u0441\u0441-\u0432\u043B\u0430\u0434\u0435\u043B\u0435\u0446 \u0447\u0435\u0440\u0435\u0437 Get-Process -Id.",
+          h: "Get-Process -Id (Get-NetTCPConnection -RemotePort 4444).OwningProcess",
+          ok: /4444[\s\S]*get-process\s+-id/i
+        },
+        {
+          t: "\u0426\u0435\u043B\u043E\u0441\u0442\u043D\u043E\u0441\u0442\u044C \u0438 \u043F\u043E\u043B\u0438\u0442\u0438\u043A\u0438",
+          th: "\u0425\u044D\u0448 \u2014 \u043E\u0442\u043F\u0435\u0447\u0430\u0442\u043E\u043A \u0441\u043E\u0434\u0435\u0440\u0436\u0438\u043C\u043E\u0433\u043E \u0444\u0430\u0439\u043B\u0430: \u0438\u0437\u043C\u0435\u043D\u0438\u043B\u0441\u044F \u0444\u0430\u0439\u043B \u2014 \u0438\u0437\u043C\u0435\u043D\u0438\u043B\u0441\u044F \u0445\u044D\u0448. <code>Get-FileHash</code> \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u044E\u0442 \u0434\u043B\u044F \u043A\u043E\u043D\u0442\u0440\u043E\u043B\u044F \u0446\u0435\u043B\u043E\u0441\u0442\u043D\u043E\u0441\u0442\u0438 \u0438 \u043F\u043E\u0438\u0441\u043A\u0430 \u0438\u0437\u0432\u0435\u0441\u0442\u043D\u044B\u0445 \u0432\u0440\u0435\u0434\u043E\u043D\u043E\u0441\u043D\u044B\u0445 \u0444\u0430\u0439\u043B\u043E\u0432. <code>Get-ExecutionPolicy</code> \u043F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u043F\u043E\u043B\u0438\u0442\u0438\u043A\u0443 \u0437\u0430\u043F\u0443\u0441\u043A\u0430 \u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432 \u2014 \u044D\u0442\u043E \u0441\u0442\u0440\u0430\u0445\u043E\u0432\u043A\u0430 \u043E\u0442 \u0441\u043B\u0443\u0447\u0430\u0439\u043D\u043E\u0433\u043E \u0437\u0430\u043F\u0443\u0441\u043A\u0430, \u0430 \u043D\u0435 \u0437\u0430\u0449\u0438\u0442\u0430 \u043E\u0442 \u0430\u0442\u0430\u043A\u0443\u044E\u0449\u0435\u0433\u043E. \u0412 \u0441\u0438\u043C\u0443\u043B\u044F\u0442\u043E\u0440\u0435 \u0438\u0441\u043F\u043E\u043B\u044C\u0437\u0443\u0435\u0442\u0441\u044F \u0443\u0447\u0435\u0431\u043D\u044B\u0439 \u043E\u0442\u043F\u0435\u0447\u0430\u0442\u043E\u043A EDU-FNV, \u0430 \u043D\u0435 \u043D\u0430\u0441\u0442\u043E\u044F\u0449\u0438\u0439 SHA-256; \u043D\u0435 \u043F\u0440\u0438\u043C\u0435\u043D\u044F\u0439\u0442\u0435 \u0435\u0433\u043E \u0434\u043B\u044F \u043F\u0440\u043E\u0432\u0435\u0440\u043A\u0438 \u0440\u0435\u0430\u043B\u044C\u043D\u043E\u0439 \u0446\u0435\u043B\u043E\u0441\u0442\u043D\u043E\u0441\u0442\u0438.",
+          ex: ["Get-FileHash Documents\\notes.txt", "Get-ExecutionPolicy"],
+          task: "\u041F\u043E\u0441\u0447\u0438\u0442\u0430\u0439\u0442\u0435 \u0445\u044D\u0448 \u0444\u0430\u0439\u043B\u0430 Documents\\notes.txt, \u0437\u0430\u0442\u0435\u043C \u0443\u0437\u043D\u0430\u0439\u0442\u0435 \u043F\u043E\u043B\u0438\u0442\u0438\u043A\u0443 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F \u0441\u043A\u0440\u0438\u043F\u0442\u043E\u0432.",
+          h: "Get-FileHash Documents\\notes.txt\nGet-ExecutionPolicy",
+          ok: /get-filehash[\s\S]*get-executionpolicy/i
+        },
+        {
+          t: "\u041F\u043E\u0438\u0441\u043A \u0441\u0435\u043A\u0440\u0435\u0442\u043E\u0432",
+          th: "\u041F\u0430\u0440\u043E\u043B\u0438 \u0432 \u0442\u0435\u043A\u0441\u0442\u043E\u0432\u044B\u0445 \u0444\u0430\u0439\u043B\u0430\u0445 \u2014 \u0447\u0430\u0441\u0442\u0430\u044F \u043D\u0430\u0445\u043E\u0434\u043A\u0430 \u043F\u0440\u0438 \u0430\u0443\u0434\u0438\u0442\u0435. \u0421\u0432\u044F\u0437\u043A\u0430 <code>Get-ChildItem -Recurse | Select-String</code> \u043F\u0440\u043E\u0447\u0451\u0441\u044B\u0432\u0430\u0435\u0442 \u0432\u0441\u0451 \u0434\u0435\u0440\u0435\u0432\u043E \u043A\u0430\u0442\u0430\u043B\u043E\u0433\u043E\u0432 \u0437\u0430 \u0441\u0435\u043A\u0443\u043D\u0434\u044B. \u041D\u0430\u0439\u0434\u0435\u043D\u043D\u043E\u0435 \u043D\u0443\u0436\u043D\u043E \u0443\u0431\u0438\u0440\u0430\u0442\u044C \u0432 \u043C\u0435\u043D\u0435\u0434\u0436\u0435\u0440 \u0441\u0435\u043A\u0440\u0435\u0442\u043E\u0432 \u0438 \u043C\u0435\u043D\u044F\u0442\u044C \u043F\u0430\u0440\u043E\u043B\u0438.",
+          ex: ["Get-ChildItem -Recurse", 'Get-ChildItem -Recurse | Select-String -Pattern "password"'],
+          task: "\u0420\u0435\u043A\u0443\u0440\u0441\u0438\u0432\u043D\u043E \u043D\u0430\u0439\u0434\u0438\u0442\u0435 \u0432\u043E \u0432\u0441\u0435\u0445 \u0444\u0430\u0439\u043B\u0430\u0445 \u0441\u0442\u0440\u043E\u043A\u0438 \u0441\u043E \u0441\u043B\u043E\u0432\u043E\u043C password.",
+          h: "Get-ChildItem -Recurse | Select-String -Pattern password",
+          ok: /get-childitem[^\n]*recurse[^\n]*\|\s*select-string/i
+        }
+      ]
+    }
+  ];
+  function flattenLessons() {
+    return courseModules.flatMap(
+      (m) => m.lessons.map((l) => ({ ...l, module: m.name, level: m.level }))
+    );
+  }
+
+  // js/core/storage.js
+  var STORAGE_KEY = "pshell4all";
+  function load() {
+    try {
+      return JSON.parse(localStorage.getItem(STORAGE_KEY)) || null;
+    } catch (e) {
+      return null;
+    }
+  }
+  function save(data) {
+    try {
+      localStorage.setItem(STORAGE_KEY, JSON.stringify(data));
+    } catch (e) {
+    }
+  }
+  function clear() {
+    try {
+      localStorage.removeItem(STORAGE_KEY);
+    } catch (e) {
+    }
+  }
+
+  // js/core/state.js
+  var state = {
+    currentLesson: 0,
+    completedLessons: {}
+    // { [lessonIndex]: 1 }
+  };
+  function initState() {
+    const saved = load();
+    const maxLesson = Math.max(flattenLessons().length - 1, 0);
+    if (saved) {
+      state.currentLesson = Math.min(Math.max(Number(saved.c) || 0, 0), maxLesson);
+      state.completedLessons = saved.d || {};
+    } else {
+      state.currentLesson = 0;
+      state.completedLessons = {};
+    }
+    return state;
+  }
+  function persist() {
+    save({
+      c: state.currentLesson,
+      d: state.completedLessons
+    });
+  }
+  function resetProgress() {
+    state.currentLesson = 0;
+    state.completedLessons = {};
+    clear();
+  }
+  function getCurrentLesson() {
+    return state.currentLesson;
+  }
+  function setCurrentLesson(index) {
+    state.currentLesson = index;
+    persist();
+  }
+  function isLessonCompleted(index) {
+    return !!state.completedLessons[index];
+  }
+  function markLessonCompleted(index) {
+    state.completedLessons[index] = 1;
+    persist();
+  }
+  function completedCount() {
+    return Object.keys(state.completedLessons).length;
+  }
+  function progressPercent(totalLessons) {
+    if (!totalLessons || totalLessons <= 0) return 0;
+    return Math.round(completedCount() / totalLessons * 100);
+  }
+
+  // js/ui/toast.js
+  function showToast(text, duration) {
+    let el = document.querySelector("#ts");
+    if (!el) return;
+    el.textContent = text;
+    el.className = "on";
+    setTimeout(() => {
+      el.className = "";
+    }, duration || 2200);
+  }
+
+  // js/powershell/parser.js
+  function tokenize(str) {
+    const result = [];
+    let current = "";
+    let quote = "";
+    let depth = 0;
+    for (const ch of str) {
+      if (quote) {
+        current += ch;
+        if (ch === quote) quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+        current += ch;
+        continue;
+      }
+      if ("{([".includes(ch)) {
+        depth++;
+        current += ch;
+        continue;
+      }
+      if ("})]".includes(ch)) {
+        depth--;
+        current += ch;
+        continue;
+      }
+      if (/\s/.test(ch)) {
+        if (depth === 0 && current) {
+          result.push(current);
+          current = "";
+        } else if (depth > 0) {
+          current += ch;
+        }
+        continue;
+      }
+      current += ch;
+    }
+    if (current) result.push(current);
+    return result;
+  }
+
+  // js/powershell/evaluator.js
+  var comparisonOps = {
+    like(s, p) {
+      const re = new RegExp(
+        "^" + String(p).replace(/[.+^${}()|[\]\\]/g, "\\$&").replace(/\*/g, ".*").replace(/\?/g, ".") + "$",
+        "i"
+      );
+      return re.test(s);
+    },
+    notlike(s, p) {
+      return !this.like(s, p);
+    },
+    match(s, p) {
+      return new RegExp(p, "i").test(s);
+    },
+    notmatch(s, p) {
+      return !new RegExp(p, "i").test(s);
+    },
+    contains(a, b) {
+      return [].concat(a).includes(b);
+    },
+    in(a, b) {
+      return [].concat(b).includes(a);
+    }
+  };
+  function add(a, b) {
+    return typeof a === "string" || typeof b === "string" ? String(a) + String(b) : Number(a) + Number(b);
+  }
+  function subtract(a, b) {
+    return Number(a) - Number(b);
+  }
+  function multiply(a, b) {
+    return Number(a) * Number(b);
+  }
+  function divide(a, b) {
+    return Number(a) / Number(b);
+  }
+  function modulo(a, b) {
+    return Number(a) % Number(b);
+  }
+  function range(from, to) {
+    if (Math.abs(to - from) >= 1e4) {
+      throw new Error("\u0414\u0438\u0430\u043F\u0430\u0437\u043E\u043D \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0431\u043E\u043B\u044C\u0448\u043E\u0439: \u0432 \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u0438 \u043C\u0430\u043A\u0441\u0438\u043C\u0443\u043C 10 000 \u044D\u043B\u0435\u043C\u0435\u043D\u0442\u043E\u0432.");
+    }
+    const step = from <= to ? 1 : -1;
+    const length = Math.abs(to - from) + 1;
+    return Array.from({ length }, (_, i) => from + i * step);
+  }
+  function getProperty(obj, key) {
+    if (obj == null) return void 0;
+    if (key.toLowerCase() === "count" && Array.isArray(obj)) return obj.length;
+    if (key.toLowerCase() === "length" && (Array.isArray(obj) || typeof obj === "string")) return obj.length;
+    const found = Object.getOwnPropertyNames(Object(obj)).find((z) => z.toLowerCase() === key.toLowerCase());
+    return found === void 0 ? void 0 : obj[found];
+  }
+  function splitBracketed(str, sep) {
+    const result = [];
+    let current = "";
+    let quote = "";
+    let depth = 0;
+    for (const ch of str) {
+      if (quote) {
+        current += ch;
+        if (ch === quote) quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+      } else if ("{([".includes(ch)) {
+        depth++;
+      } else if ("})]".includes(ch)) {
+        depth--;
+      }
+      if (ch === sep && depth === 0) {
+        result.push(current);
+        current = "";
+        continue;
+      }
+      current += ch;
+    }
+    result.push(current);
+    return result;
+  }
+  function findClosingBracket(str, start2) {
+    let depth = 0;
+    let quote = "";
+    for (let i = start2; i < str.length; i++) {
+      const ch = str[i];
+      if (quote) {
+        if (ch === quote) quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+      } else if (ch === "{") {
+        depth++;
+      } else if (ch === "}" && --depth === 0) {
+        return i;
+      }
+    }
+    return -1;
+  }
+  function isBalancedOuter(str) {
+    if (str[0] !== "(" || str[str.length - 1] !== ")") return false;
+    let depth = 0;
+    let quote = "";
+    for (let i = 0; i < str.length; i++) {
+      const ch = str[i];
+      if (quote) {
+        if (ch === quote) quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+      } else if (ch === "(") {
+        depth++;
+      } else if (ch === ")") {
+        depth--;
+        if (depth === 0 && i < str.length - 1) return false;
+      }
+    }
+    return depth === 0;
+  }
+  function splitByOperator(str, ops, lastOnly) {
+    let quote = "";
+    let depth = 0;
+    let found = null;
+    for (let i = 0; i < str.length; i++) {
+      const ch = str[i];
+      if (quote) {
+        if (ch === quote) quote = "";
+        continue;
+      }
+      if (ch === '"' || ch === "'") {
+        quote = ch;
+      } else if ("([{".includes(ch)) {
+        depth++;
+      } else if (")]}".includes(ch)) {
+        depth--;
+      }
+      if (depth !== 0) continue;
+      for (const op of ops) {
+        const slice = str.slice(i, i + op.length);
+        if (slice.toLowerCase() === op.toLowerCase() && (op === "-" || op[0] !== "-" || i === 0 || /\s/.test(str[i - 1])) && (op === "-" || op[0] !== "-" || i + op.length === str.length || /\s/.test(str[i + op.length]))) {
+          const parts = [str.slice(0, i).trim(), op.toLowerCase(), str.slice(i + op.length).trim()];
+          if (!lastOnly) return parts;
+          found = parts;
+        }
+      }
+    }
+    return found;
+  }
+
+  // js/powershell/aliases.js
+  var aliases = {
+    // File system
+    ls: "Get-ChildItem",
+    dir: "Get-ChildItem",
+    gci: "Get-ChildItem",
+    cd: "Set-Location",
+    sl: "Set-Location",
+    pwd: "Get-Location",
+    gl: "Get-Location",
+    cat: "Get-Content",
+    gc: "Get-Content",
+    type: "Get-Content",
+    echo: "Write-Output",
+    write: "Write-Output",
+    // Filter / sort
+    where: "Where-Object",
+    "?": "Where-Object",
+    select: "Select-Object",
+    sort: "Sort-Object",
+    // Loop
+    foreach: "ForEach-Object",
+    "%": "ForEach-Object",
+    // Measure
+    measure: "Measure-Object",
+    // Process / service
+    ps: "Get-Process",
+    gps: "Get-Process",
+    gsv: "Get-Service",
+    // Remove
+    rm: "Remove-Item",
+    del: "Remove-Item",
+    ri: "Remove-Item",
+    // Clear
+    cls: "Clear-Host",
+    clear: "Clear-Host",
+    // Help
+    help: "Get-Help",
+    man: "Get-Help",
+    // Member
+    gm: "Get-Member",
+    // Format
+    ft: "Format-Table",
+    fl: "Format-List",
+    // Search
+    sls: "Select-String",
+    // New
+    ni: "New-Item",
+    // Set content
+    sc: "Set-Content",
+    ac: "Add-Content",
+    // Stop
+    kill: "Stop-Process",
+    // Group
+    group: "Group-Object",
+    // Command
+    gcm: "Get-Command",
+    // Date
+    date: "Get-Date"
+  };
+  function resolveAlias(name) {
+    const lower = name.toLowerCase();
+    return aliases[lower] || null;
+  }
+
+  // js/simulator/filesystem.js
+  function F(f) {
+    return { f };
+  }
+  function D(c) {
+    return { c };
+  }
+  function createFilesystem() {
+    return D({
+      "C:": D({
+        Users: D({
+          Admin: D({
+            Documents: D({
+              "notes.txt": F("\u0412\u0441\u0442\u0440\u0435\u0447\u0430 \u0432 10:00\n\u041F\u0430\u0440\u043E\u043B\u044C \u043E\u0442 VPN: Winter2024!\n"),
+              "creds.txt": F("login=admin\npassword=P@ssw0rd\n"),
+              Logs: D({
+                "app.log": F("INFO start\nWARN disk 91%\nERROR db timeout\nINFO ok\nERROR auth failed\n")
+              }),
+              Scripts: D({})
+            })
+          })
+        })
+      })
+    });
+  }
+  function findKey(node, name) {
+    if (!node || !node.c) return void 0;
+    return Object.keys(node.c).find((k) => k.toLowerCase() === name.toLowerCase());
+  }
+  function getNode(fsRoot, segments) {
+    let node = fsRoot;
+    for (const s of segments) {
+      const k = findKey(node, s);
+      if (!k) return null;
+      node = node.c[k];
+    }
+    return node;
+  }
+  function pathToString(segments) {
+    return segments.length === 1 ? segments[0] + "\\" : segments.join("\\");
+  }
+  function resolvePath(fsRoot, cwd, path) {
+    if (path == null || path === true) {
+      throw new Error("\u041D\u0435 \u0443\u043A\u0430\u0437\u0430\u043D \u043F\u0443\u0442\u044C. \u041F\u0440\u0438\u043C\u0435\u0440: Get-Content Logs\\app.log");
+    }
+    let segments = /^[A-Za-z]:/.test(path) ? [] : [...cwd];
+    for (const s of String(path).split(/[\\/]/)) {
+      if (!s || s === ".") continue;
+      if (s === "..") segments.pop();
+      else segments.push(s);
+    }
+    const node = getNode(fsRoot, segments);
+    const parent = segments.length > 0 ? getNode(fsRoot, segments.slice(0, -1)) : null;
+    const name = segments[segments.length - 1];
+    return { segments, node, parent, name };
+  }
+  function readFile(fsRoot, cwd, path) {
+    const r = resolvePath(fsRoot, cwd, path);
+    if (!r.node) throw new Error(`\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u043F\u0443\u0442\u044C "${path}", \u0442\u0430\u043A \u043A\u0430\u043A \u043E\u043D \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442.`);
+    if (r.node.c) throw new Error("\u0423\u043A\u0430\u0437\u0430\u043D \u043A\u0430\u0442\u0430\u043B\u043E\u0433, \u0430 \u043D\u0435 \u0444\u0430\u0439\u043B: " + path);
+    return r.node.f.replace(/\r\n?/g, "\n");
+  }
+  function writeFile(fsRoot, cwd, path, text, append) {
+    const r = resolvePath(fsRoot, cwd, path);
+    if (!r.parent || !r.parent.c) throw new Error("\u041A\u0430\u0442\u0430\u043B\u043E\u0433 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D: " + path);
+    if (r.node && r.node.c) throw new Error("\u0423\u043A\u0430\u0437\u0430\u043D \u043A\u0430\u0442\u0430\u043B\u043E\u0433.");
+    const key = findKey(r.parent, r.name) || r.name;
+    if (append && r.node) {
+      r.parent.c[key] = F(r.node.f + text);
+    } else {
+      r.parent.c[key] = F(text + "\n");
+    }
+  }
+  function listDirectory(node, segments, recursive) {
+    const result = [];
+    for (const k of Object.keys(node.c)) {
+      const child = node.c[k];
+      const entry = {
+        Mode: child.c ? "d-----" : "-a----",
+        Name: k,
+        Length: child.c ? "" : child.f.length
+      };
+      Object.defineProperty(entry, "FullName", {
+        value: pathToString([...segments, k])
+      });
+      result.push(proxyWrap(entry));
+      if (recursive && child.c) {
+        result.push(...listDirectory(child, [...segments, k], 1));
+      }
+    }
+    return result;
+  }
+  function proxyWrap(obj) {
+    return new Proxy(obj, {
+      get(target, key) {
+        if (typeof key !== "string" || key in target) return target[key];
+        const found = Object.keys(target).find((k) => k.toLowerCase() === key.toLowerCase());
+        return found !== void 0 ? target[found] : void 0;
+      }
+    });
+  }
+
+  // js/simulator/policies.js
+  var executionPolicy = "RemoteSigned";
+  function getExecutionPolicy() {
+    return executionPolicy;
+  }
+  function setExecutionPolicy(value) {
+    executionPolicy = value || executionPolicy;
+  }
+  function resetExecutionPolicy() {
+    executionPolicy = "RemoteSigned";
+  }
+
+  // js/powershell/commands.js
+  function g(args, key, defaultPos) {
+    if (args.n[key] !== void 0) return args.n[key];
+    if (args._[defaultPos] !== void 0) return args._[defaultPos];
+    return void 0;
+  }
+  function findService(svcs, args) {
+    const name = g(args, "name", 0);
+    const found = svcs.find((s) => s.Name.toLowerCase() === String(name).toLowerCase());
+    if (!found) throw new Error(`\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u0441\u043B\u0443\u0436\u0431\u0443 "${name}".`);
+    return found;
+  }
+  var HELP = {
+    "Get-Process": ["\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u0437\u0430\u043F\u0443\u0449\u0435\u043D\u043D\u044B\u0435 \u043F\u0440\u043E\u0446\u0435\u0441\u0441\u044B.", "Get-Process -Name chrome"],
+    "Get-Service": ["\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 \u0441\u043B\u0443\u0436\u0431\u044B Windows.", "Get-Service -Name Spooler"],
+    "Where-Object": ["\u0424\u0438\u043B\u044C\u0442\u0440\u0443\u0435\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B \u043F\u043E \u0443\u0441\u043B\u043E\u0432\u0438\u044E.", "Get-Process | Where-Object { $_.CPU -gt 50 }"],
+    "Select-Object": ["\u0412\u044B\u0431\u0438\u0440\u0430\u0435\u0442 \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0430 \u0438 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432.", "Get-Process | Select-Object Name,Id -First 3"],
+    "Sort-Object": ["\u0421\u043E\u0440\u0442\u0438\u0440\u0443\u0435\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u044B \u043F\u043E \u0441\u0432\u043E\u0439\u0441\u0442\u0432\u0443.", "Get-Process | Sort-Object CPU -Descending"],
+    "Get-ChildItem": ["\u0421\u043F\u0438\u0441\u043E\u043A \u0444\u0430\u0439\u043B\u043E\u0432 \u0438 \u043F\u0430\u043F\u043E\u043A (ls, dir).", "Get-ChildItem -Recurse"],
+    "Get-Content": ["\u0427\u0438\u0442\u0430\u0435\u0442 \u0444\u0430\u0439\u043B \u043F\u043E\u0441\u0442\u0440\u043E\u0447\u043D\u043E (cat).", "Get-Content Documents\\Logs\\app.log"],
+    "Select-String": ["\u0418\u0449\u0435\u0442 \u0442\u0435\u043A\u0441\u0442 \u043F\u043E \u0448\u0430\u0431\u043B\u043E\u043D\u0443 (\u0430\u043D\u0430\u043B\u043E\u0433 grep).", "Select-String -Pattern ERROR -Path Documents\\Logs\\app.log"],
+    "Measure-Object": ["\u0421\u0447\u0438\u0442\u0430\u0435\u0442 \u043A\u043E\u043B\u0438\u0447\u0435\u0441\u0442\u0432\u043E \u0438 \u0441\u0442\u0430\u0442\u0438\u0441\u0442\u0438\u043A\u0443.", "Get-Process | Measure-Object CPU -Sum"],
+    "Get-WinEvent": ["\u0427\u0438\u0442\u0430\u0435\u0442 \u0436\u0443\u0440\u043D\u0430\u043B\u044B \u0441\u043E\u0431\u044B\u0442\u0438\u0439.", "Get-WinEvent -MaxEvents 5"],
+    "Get-NetTCPConnection": ["\u041F\u043E\u043A\u0430\u0437\u044B\u0432\u0430\u0435\u0442 TCP-\u0441\u043E\u0435\u0434\u0438\u043D\u0435\u043D\u0438\u044F.", "Get-NetTCPConnection -State Established"],
+    "Get-FileHash": ["\u0421\u0447\u0438\u0442\u0430\u0435\u0442 \u0445\u044D\u0448 \u0444\u0430\u0439\u043B\u0430.", "Get-FileHash Documents\\notes.txt"]
+  };
+  var _procs;
+  var _svcs;
+  var _users;
+  var _events;
+  var _net;
+  var _fsRoot;
+  var _cwd;
+  var _proxyWrap;
+  var _out;
+  function initCommands(procs, svcs, users, events, net, fsRoot, cwd, proxyWrap2, out) {
+    _procs = procs;
+    _svcs = svcs;
+    _users = users;
+    _events = events;
+    _net = net;
+    _fsRoot = fsRoot;
+    _cwd = cwd;
+    _proxyWrap = proxyWrap2;
+    _out = out;
+  }
+  var _cmds = null;
+  function getCommands() {
+    if (_cmds) return _cmds;
+    _cmds = {
+      "Get-Process": (args) => {
+        const name = g(args, "name", 0);
+        const id = args.n.id;
+        let result = _procs.filter(
+          (p) => (name == null || p.Name.toLowerCase() === String(name).toLowerCase()) && (id == null || p.Id === id)
+        );
+        if (!result.length && (name !== void 0 || id !== void 0)) {
+          throw new Error("\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441.");
+        }
+        return result;
+      },
+      "Stop-Process": (args) => {
+        const name = g(args, "name", 0);
+        const id = args.n.id;
+        const target = _procs.filter(
+          (p) => name != null ? p.Name.toLowerCase() === String(name).toLowerCase() : p.Id === id
+        );
+        if (!target.length) throw new Error("\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u043F\u0440\u043E\u0446\u0435\u0441\u0441.");
+        target.forEach((p) => _procs.splice(_procs.indexOf(p), 1));
+        return [];
+      },
+      "Get-Service": (args) => {
+        const name = g(args, "name", 0);
+        const result = _svcs.filter((s) => name == null || s.Name.toLowerCase() === String(name).toLowerCase());
+        if (!result.length) throw new Error(`\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u0441\u043B\u0443\u0436\u0431\u0443 "${name}".`);
+        return result;
+      },
+      "Start-Service": (args) => {
+        findService(_svcs, args).Status = "Running";
+        return [];
+      },
+      "Stop-Service": (args) => {
+        findService(_svcs, args).Status = "Stopped";
+        return [];
+      },
+      "Get-LocalUser": () => _users,
+      "Get-WinEvent": (args) => {
+        return args.n.maxevents ? _events.slice(0, args.n.maxevents) : _events;
+      },
+      "Get-NetTCPConnection": (args) => {
+        return _net.filter(
+          (c) => ["state", "remoteport", "localport", "owningprocess"].every((k) => {
+            const key = Object.keys(c).find((x) => x.toLowerCase() === k);
+            return args.n[k] == null || String(c[key]).toLowerCase() === String(args.n[k]).toLowerCase();
+          })
+        );
+      },
+      "Get-ChildItem": (args) => {
+        const path = g(args, "path", 0) || ".";
+        const r = resolvePath(_fsRoot, _cwd, path);
+        if (!r.node) throw new Error(`\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u043F\u0443\u0442\u044C "${path}", \u0442\u0430\u043A \u043A\u0430\u043A \u043E\u043D \u043D\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442.`);
+        if (r.node.c) return listDirectory(r.node, r.segments, args.n.recurse);
+        return [r.name];
+      },
+      "Get-Content": (args) => {
+        const content = readFile(_fsRoot, _cwd, g(args, "path", 0));
+        return content.split("\n").filter((l, i, arr) => l || i < arr.length - 1);
+      },
+      "Set-Content": (args) => {
+        writeFile(_fsRoot, _cwd, g(args, "path", 0), [].concat(g(args, "value", 1) ?? "").join("\n"));
+        return [];
+      },
+      "Add-Content": (args) => {
+        writeFile(_fsRoot, _cwd, g(args, "path", 0), [].concat(g(args, "value", 1) ?? "").join("\n") + "\n", true);
+        return [];
+      },
+      "New-Item": (args) => {
+        let path = g(args, "path", 0) || ".";
+        if (args.n.name) path += "\\" + args.n.name;
+        const r = resolvePath(_fsRoot, _cwd, path);
+        if (r.node) throw new Error("\u042D\u043B\u0435\u043C\u0435\u043D\u0442 \u0443\u0436\u0435 \u0441\u0443\u0449\u0435\u0441\u0442\u0432\u0443\u0435\u0442.");
+        if (!r.parent || !r.parent.c) throw new Error("\u0420\u043E\u0434\u0438\u0442\u0435\u043B\u044C\u0441\u043A\u0438\u0439 \u043A\u0430\u0442\u0430\u043B\u043E\u0433 \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D.");
+        const isDir = /dir/i.test(args.n.itemtype);
+        r.parent.c[r.name] = isDir ? { c: {} } : { f: args.n.value != null ? args.n.value + "\n" : "" };
+        return [_proxyWrap({ Mode: isDir ? "d-----" : "-a----", Name: r.name })];
+      },
+      "Remove-Item": (args) => {
+        const r = resolvePath(_fsRoot, _cwd, g(args, "path", 0));
+        if (!r.node) throw new Error("\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u043F\u0443\u0442\u044C.");
+        if (r.node.c && Object.keys(r.node.c).length > 0) {
+          throw new Error("\u041D\u0435\u043B\u044C\u0437\u044F \u0443\u0434\u0430\u043B\u0438\u0442\u044C \u043D\u0435\u043F\u0443\u0441\u0442\u0443\u044E \u043F\u0430\u043F\u043A\u0443.");
+        }
+        if (r.segments.length <= 3) throw new Error("\u042D\u0442\u0443 \u043F\u0430\u043F\u043A\u0443 \u0443\u0434\u0430\u043B\u044F\u0442\u044C \u043D\u0435\u043B\u044C\u0437\u044F: \u043E\u043D\u0430 \u043D\u0443\u0436\u043D\u0430 \u043B\u0430\u0431\u043E\u0440\u0430\u0442\u043E\u0440\u0438\u0438.");
+        delete r.parent.c[findKey(r.parent, r.name)];
+        return [];
+      },
+      "Test-Path": (args) => {
+        return [!!resolvePath(_fsRoot, _cwd, g(args, "path", 0)).node];
+      },
+      "Set-Location": (args) => {
+        const path = g(args, "path", 0) || "C:\\Users\\Admin";
+        const r = resolvePath(_fsRoot, _cwd, path);
+        if (!r.node || !r.node.c) throw new Error(`\u041D\u0435 \u0443\u0434\u0430\u0451\u0442\u0441\u044F \u043D\u0430\u0439\u0442\u0438 \u043F\u0443\u0442\u044C "${path}".`);
+        _cwd.length = 0;
+        r.segments.forEach((s) => _cwd.push(s));
+        return [];
+      },
+      "Get-Location": () => [_proxyWrap({ Path: pathToString(_cwd) })],
+      "Write-Output": (args) => args._.flat(),
+      "Write-Host": (args) => {
+        _out(args._.flat().join(" "), "wh");
+        return [];
+      },
+      "Get-Date": () => {
+        const d = /* @__PURE__ */ new Date();
+        const t = d.toLocaleString("ru-RU");
+        const days = ["\u0412\u043E\u0441\u043A\u0440\u0435\u0441\u0435\u043D\u044C\u0435", "\u041F\u043E\u043D\u0435\u0434\u0435\u043B\u044C\u043D\u0438\u043A", "\u0412\u0442\u043E\u0440\u043D\u0438\u043A", "\u0421\u0440\u0435\u0434\u0430", "\u0427\u0435\u0442\u0432\u0435\u0440\u0433", "\u041F\u044F\u0442\u043D\u0438\u0446\u0430", "\u0421\u0443\u0431\u0431\u043E\u0442\u0430"];
+        const o = {};
+        Object.defineProperties(o, { __s: { value: t }, toString: { value: () => t } });
+        const props = { DateTime: t, Year: d.getFullYear(), Month: d.getMonth() + 1, Day: d.getDate(), Hour: d.getHours(), Minute: d.getMinutes(), DayOfWeek: days[d.getDay()] };
+        for (const k in props) Object.defineProperty(o, k, { value: props[k] });
+        return [_proxyWrap(o)];
+      },
+      "Clear-Host": () => [],
+      "Select-Object": (args, input) => {
+        let result = input;
+        const props = [].concat(args.n.property ?? [], args._).flat().filter((x) => typeof x === "string");
+        if (args.n.first) result = result.slice(0, args.n.first);
+        if (args.n.last) result = result.slice(-args.n.last);
+        if (args.n.expandproperty) return result.map((x) => x[args.n.expandproperty]);
+        if (props.length) {
+          result = result.map((x) => {
+            const o = {};
+            props.forEach((k) => {
+              const key = Object.keys(x).find((z) => z.toLowerCase() === k.toLowerCase()) || k;
+              o[key] = x[key];
+            });
+            return _proxyWrap(o);
+          });
+        }
+        if (args.n.unique) {
+          const seen = /* @__PURE__ */ new Set();
+          result = result.filter((x) => {
+            const key = props.length ? JSON.stringify(x) : String(x);
+            if (seen.has(key)) return false;
+            seen.add(key);
+            return true;
+          });
+        }
+        return result;
+      },
+      "Sort-Object": (args, input) => {
+        const key = g(args, "property", 0);
+        const fn = (x) => key ? x[key] : x;
+        const dir = args.n.descending ? -1 : 1;
+        return [...input].sort((x, y) => (fn(x) > fn(y) ? 1 : fn(x) < fn(y) ? -1 : 0) * dir);
+      },
+      "Measure-Object": (args, input) => {
+        const prop = g(args, "property", 0);
+        const obj = { Count: input.length };
+        if (prop) {
+          const vals = input.map((x) => +x[prop]);
+          const sum = vals.reduce((a, b) => a + b, 0);
+          Object.assign(obj, {
+            Average: +(sum / vals.length).toFixed(2),
+            Sum: +sum.toFixed(2),
+            Maximum: Math.max(...vals),
+            Minimum: Math.min(...vals),
+            Property: prop
+          });
+        }
+        return [_proxyWrap(obj)];
+      },
+      "Group-Object": (args, input) => {
+        const key = g(args, "property", 0);
+        const map = {};
+        input.forEach((x) => {
+          map[x[key]] = (map[x[key]] || 0) + 1;
+        });
+        return Object.entries(map).map(([Name, Count]) => _proxyWrap({ Count, Name }));
+      },
+      "Get-Member": (args, input) => {
+        if (!input.length) throw new Error("\u041D\u0435\u0442 \u043E\u0431\u044A\u0435\u043A\u0442\u043E\u0432 \u0434\u043B\u044F Get-Member.");
+        return Object.getOwnPropertyNames(input[0]).filter((k) => k !== "__s" && k !== "__ht" && k !== "toString").map((k) => _proxyWrap({ Name: k, MemberType: "Property", Type: typeof input[0][k] }));
+      },
+      "Format-Table": (args, input) => args._.length ? _cmds["Select-Object"](args, input) : input,
+      "Format-List": (args, input) => [{
+        __txt: input.map((x) => Object.keys(x).map((k) => k.padEnd(14) + ": " + x[k]).join("\n")).join("\n\n")
+      }],
+      "ConvertTo-Json": (args, input) => [{
+        __txt: JSON.stringify(input.length === 1 ? input[0] : input, null, 2)
+      }],
+      "Select-String": (args, input) => {
+        const pattern = g(args, "pattern", 0);
+        let re;
+        try {
+          re = new RegExp(args.n.simplematch ? String(pattern).replace(/[.*+?^${}()|[\]\\]/g, "\\$&") : pattern, "i");
+        } catch (e) {
+          throw new Error("\u041D\u0435\u0432\u0435\u0440\u043D\u044B\u0439 \u0448\u0430\u0431\u043B\u043E\u043D \u043F\u043E\u0438\u0441\u043A\u0430.");
+        }
+        const src = args.n.path ? [[args.n.path, readFile(_fsRoot, _cwd, args.n.path).split("\n")]] : input.some((x) => x && x.FullName) ? input.filter((x) => x.FullName && x.Mode[0] !== "d").map((x) => [x.FullName, readFile(_fsRoot, _cwd, x.FullName).split("\n")]) : [["", input.map(String)]];
+        return src.flatMap(
+          ([file, lines]) => lines.map((s, n) => [s, n]).filter(([s]) => s && re.test(s)).map(
+            ([s, n]) => file ? `${file}:${n + 1}:${s}` : s
+          )
+        );
+      },
+      "Get-FileHash": (args) => {
+        const path = g(args, "path", 0);
+        const text = readFile(_fsRoot, _cwd, path);
+        let h = 2166136261;
+        const hashes = [];
+        for (let k = 0; k < 8; k++) {
+          for (const ch of text + k) h = Math.imul(h ^ ch.charCodeAt(0), 16777619);
+          hashes.push((h >>> 0).toString(16).padStart(8, "0"));
+        }
+        return [_proxyWrap({
+          Algorithm: "EDU-FNV",
+          Hash: hashes.join("").toUpperCase(),
+          Path: pathToString(resolvePath(_fsRoot, _cwd, path).segments),
+          Note: "\u0423\u0447\u0435\u0431\u043D\u044B\u0439 \u043E\u0442\u043F\u0435\u0447\u0430\u0442\u043E\u043A; \u043D\u0435 \u044F\u0432\u043B\u044F\u0435\u0442\u0441\u044F \u043A\u0440\u0438\u043F\u0442\u043E\u0433\u0440\u0430\u0444\u0438\u0447\u0435\u0441\u043A\u0438\u043C SHA-256"
+        })];
+      },
+      "Get-ExecutionPolicy": () => [getExecutionPolicy()],
+      "Set-ExecutionPolicy": (args) => {
+        setExecutionPolicy(args._[0]);
+        return [];
+      },
+      "Where-Object": (args, input) => input || [],
+      "ForEach-Object": (args, input) => input || [],
+      "Get-Command": (args) => {
+        const pattern = g(args, "name", 0);
+        const all = Object.keys(_cmds).filter((k) => k.includes("-"));
+        if (pattern) return all.filter((k) => comparisonOps.like(k, pattern)).sort();
+        return all.sort();
+      },
+      "Get-Help": (args) => {
+        const name = String(g(args, "name", 0) || "Get-Help");
+        const key = Object.keys(_cmds).find((c) => c.toLowerCase() === name.toLowerCase());
+        if (!key) throw new Error(`\u0421\u043F\u0440\u0430\u0432\u043A\u0430 \u043F\u043E "${name}" \u043D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D\u0430. \u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 Get-Command.`);
+        const h = HELP[key] || ["\u041E\u043F\u0438\u0441\u0430\u043D\u0438\u0435 \u0441\u043C\u043E\u0442\u0440\u0438\u0442\u0435 \u0432 \u0443\u0440\u043E\u043A\u0430\u0445 \u043A\u0443\u0440\u0441\u0430.", key];
+        return [{
+          __txt: `\u0418\u041C\u042F
+    ${key}
+
+\u041E\u041F\u0418\u0421\u0410\u041D\u0418\u0415
+    ${h[0]}
+
+\u041F\u0420\u0418\u041C\u0415\u0420
+    PS> ${h[1]}`
+        }];
+      }
+    };
+    return _cmds;
+  }
+
+  // js/powershell/formatter.js
+  function formatOutput(results, proxyWrap2) {
+    if (!results.length) return "";
+    if (results.length === 1 && results[0] && results[0].__txt) {
+      return results[0].__txt;
+    }
+    if (results.every((x) => x && typeof x === "object" && x.__s !== void 0)) {
+      return results.map((x) => x.__s).join("\n");
+    }
+    results = results.flatMap(
+      (x) => x && typeof x === "object" && x.__ht ? Object.keys(x).map((k) => proxyWrap2({ Name: k, Value: x[k] })) : [x]
+    );
+    if (results.every((x) => x === null || typeof x !== "object")) {
+      return results.join("\n");
+    }
+    const objs = results.filter((x) => x && typeof x === "object");
+    if (!objs.length) return "";
+    const keys = Object.keys(objs[0]);
+    const cell = (obj, key) => {
+      const val = obj[key];
+      if (Array.isArray(val)) return val.join(",");
+      if (typeof val === "boolean") return val ? "True" : "False";
+      return String(val ?? "");
+    };
+    const widths = keys.map(
+      (k) => Math.max(k.length, ...objs.map((x) => cell(x, k).length))
+    );
+    const row = (fn) => keys.map((k, i) => fn(k).padEnd(widths[i])).join("  ").trimEnd();
+    const lines = [
+      row((k) => k),
+      row((k) => "-".repeat(k.length)),
+      ...objs.map((x) => row((k) => cell(x, k)))
+    ];
+    return lines.join("\n");
+  }
+
+  // js/powershell/interpreter.js
+  var ReturnSignal = class {
+    constructor(value) {
+      this.value = value;
+    }
+  };
+  function createInterpreter(env) {
+    const V = /* @__PURE__ */ Object.create(null);
+    const FN = {};
+    let CAUGHT = false;
+    let CUR = null;
+    let depth = 0;
+    function evalExpr(s) {
+      s = String(s).trim();
+      if (!s) return "";
+      if (isBalancedOuter(s)) return evalExpr(s.slice(1, -1));
+      if (/^"[^"]*"$/.test(s)) return interpolate(s.slice(1, -1));
+      if (/^'[^']*'$/.test(s)) return s.slice(1, -1);
+      let m;
+      if (m = s.match(/^\(([\s\S]+)\)\.([A-Za-z_]\w*)$/)) {
+        const r = exec(m[1]);
+        const vals = r.map((v) => getProperty(v, m[2]));
+        return vals.length === 1 ? vals[0] : vals;
+      }
+      if (m = s.match(/^\$\(([\s\S]+)\)$/)) {
+        const r = exec(m[1]);
+        return r.length === 1 ? r[0] : r;
+      }
+      if (/^\$true$/i.test(s)) return true;
+      if (/^\$false$/i.test(s)) return false;
+      if (/^\$null$/i.test(s)) return null;
+      if (m = s.match(/^(-?\d+)\.\.(-?\d+)$/)) return range(+m[1], +m[2]);
+      if (m = s.match(/^@\(([\s\S]*)\)$/)) {
+        if (!m[1].trim()) return [];
+        const p = splitBracketed(m[1], ",");
+        return p.length > 1 ? p.map(evalExpr) : exec(m[1]);
+      }
+      if (m = s.match(/^(@\([\s\S]*\))\.([A-Za-z_]\w*)$/)) {
+        return getProperty(evalExpr(m[1]), m[2]);
+      }
+      if (m = s.match(/^(\[pscustomobject\]\s*)?@\{([\s\S]*)\}$/i)) {
+        const o = {};
+        for (const pair of splitBracketed(m[2].replace(/\n/g, ";"), ";")) {
+          const q = pair.trim();
+          if (!q) continue;
+          const eq = q.indexOf("=");
+          if (eq < 0) throw new Error("\u041D\u0435\u0432\u0435\u0440\u043D\u0430\u044F \u0437\u0430\u043F\u0438\u0441\u044C \u0432 \u0445\u044D\u0448-\u0442\u0430\u0431\u043B\u0438\u0446\u0435: " + q);
+          o[q.slice(0, eq).trim().replace(/^["']|["']$/g, "")] = evalExpr(q.slice(eq + 1));
+        }
+        if (!m[1]) Object.defineProperty(o, "__ht", { value: true });
+        return env.proxyWrap(o);
+      }
+      if (m = s.match(/^(\$[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*)\[([^\[\]]+)\]$/)) {
+        const v = evalExpr(m[1]);
+        const i = evalExpr(m[2]);
+        return Array.isArray(v) ? v[i < 0 ? v.length + i : i] : getProperty(v, String(i));
+      }
+      if (m = s.match(/^\$[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*$/)) {
+        return resolveVar(s);
+      }
+      if (m = s.match(/^(-?\d+(?:\.\d+)?)$/)) return Number(s);
+      {
+        const parts = splitBracketed(s, ",");
+        if (parts.length > 1) return parts.map(evalExpr);
+      }
+      for (const ops of [["-or"], ["-and"]]) {
+        const z = splitByOperator(s, ops, false);
+        if (z) {
+          const a = evalExpr(z[0]), b = evalExpr(z[2]);
+          if (z[1] === "-or") return !!a || !!b;
+          if (z[1] === "-and") return !!a && !!b;
+        }
+      }
+      {
+        const ops = ["-eq", "-ne", "-gt", "-lt", "-ge", "-le", "-like", "-notlike", "-match", "-notmatch", "-contains", "-in"];
+        const z = splitByOperator(s, ops, true);
+        if (z) {
+          const a = evalExpr(z[0]), b = evalExpr(z[2]);
+          switch (z[1]) {
+            case "-eq":
+              return String(a).toLowerCase() === String(b).toLowerCase();
+            case "-ne":
+              return String(a).toLowerCase() !== String(b).toLowerCase();
+            case "-gt":
+              return a > b;
+            case "-lt":
+              return a < b;
+            case "-ge":
+              return a >= b;
+            case "-le":
+              return a <= b;
+            case "-like":
+              return comparisonOps.like(a, b);
+            case "-notlike":
+              return comparisonOps.notlike(a, b);
+            case "-match":
+              return comparisonOps.match(a, b);
+            case "-notmatch":
+              return comparisonOps.notmatch(a, b);
+            case "-contains":
+              return comparisonOps.contains(a, b);
+            case "-in":
+              return comparisonOps.in(a, b);
+          }
+        }
+      }
+      for (const ops of [["+", "-"], ["*", "/", "%"]]) {
+        const z = splitByOperator(s, ops, ops[0] === "+" || ops[0] === "*");
+        if (z) {
+          const a = evalExpr(z[0]), b = evalExpr(z[2]);
+          if (z[1] === "+") return add(a, b);
+          if (z[1] === "-") return subtract(a, b);
+          if (z[1] === "*") return multiply(a, b);
+          if (z[1] === "/") return divide(a, b);
+          if (z[1] === "%") return modulo(a, b);
+        }
+      }
+      if (m = s.match(/^-not\s+([\s\S]+)$/i)) return !evalExpr(m[1]);
+      if (s[0] === "!" && s.length > 1) return !evalExpr(s.slice(1));
+      if (m = s.match(/^("[^"]*"|'[^']*'|\$[A-Za-z_]\w*|[A-Za-z_]\w*)\.(ToUpper|ToLower)\s*\(\)$/i)) {
+        const v = evalExpr(m[1]);
+        return m[2].toLowerCase() === "toupper" ? String(v).toUpperCase() : String(v).toLowerCase();
+      }
+      if (m = s.match(/^(.+)\.Contains\((.*)\)$/i)) {
+        return String(evalExpr(m[1])).includes(evalExpr(m[2]));
+      }
+      if (/^[A-Za-z_][\w-]*$/.test(s)) {
+        throw new Error(`\u0422\u0435\u0440\u043C\u0438\u043D "${s}" \u043D\u0435 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u043D \u043A\u0430\u043A \u0438\u043C\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442\u0430, \u0444\u0443\u043D\u043A\u0446\u0438\u0438 \u0438\u043B\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B. Get-Command \u043F\u043E\u043A\u0430\u0436\u0435\u0442 \u0434\u043E\u0441\u0442\u0443\u043F\u043D\u044B\u0435 \u043A\u043E\u043C\u0430\u043D\u0434\u044B.`);
+      }
+      if (/^[A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*$/.test(s)) {
+        const parts = s.split(".");
+        let v = V[parts.shift().toLowerCase()];
+        for (const k of parts) v = getProperty(v, k);
+        return v;
+      }
+      throw new Error("\u041D\u0435\u043F\u043E\u0434\u0434\u0435\u0440\u0436\u0438\u0432\u0430\u0435\u043C\u043E\u0435 \u0432\u044B\u0440\u0430\u0436\u0435\u043D\u0438\u0435: " + s);
+    }
+    function interpolate(str) {
+      return str.replace(/\$\(([^()]*)\)|\$([A-Za-z_]\w*(?:\.[A-Za-z_]\w*)*)/g, (m, cmd, vn) => {
+        try {
+          if (cmd !== void 0) {
+            const r = exec(cmd);
+            return r.map((z) => z && typeof z === "object" ? formatOutput([z], env.proxyWrap) : String(z)).join(" ");
+          }
+          const v = resolveVar("$" + vn);
+          return v == null ? "" : Array.isArray(v) ? v.join(" ") : String(v);
+        } catch (e) {
+          return m;
+        }
+      }).replace(/`n/g, "\n");
+    }
+    function resolveVar(x) {
+      const m = x.match(/^\$([A-Za-z_]\w*)((?:\.[A-Za-z_]\w*)*)$/);
+      if (!m) return void 0;
+      let v = m[1] === "_" ? CUR : V[m[1].toLowerCase()];
+      for (const k of m[2].split(".").filter(Boolean)) v = getProperty(v, k);
+      return v;
+    }
+    function toValue(token) {
+      if (token[0] === "{") return token;
+      if (/^["'$(@]/.test(token)) return evalExpr(token);
+      if (/^-?\d+(\.\d+)?$/.test(token)) return +token;
+      if (token.includes(",")) return token.split(",");
+      return token;
+    }
+    function parseTokenValues(tokens) {
+      const args = { _: [], n: {} };
+      const switchNames = /* @__PURE__ */ new Set(["recurse", "descending", "force", "unique", "simplematch", "autosize", "sum", "average", "maximum", "minimum"]);
+      for (let i = 1; i < tokens.length; i++) {
+        const token = tokens[i];
+        if (/^-[a-z]/i.test(token)) {
+          const key = token.slice(1).toLowerCase();
+          if (switchNames.has(key) || i + 1 >= tokens.length || /^-[a-z]/i.test(tokens[i + 1])) {
+            args.n[key] = true;
+          } else {
+            args.n[key] = toValue(tokens[++i]);
+          }
+        } else {
+          args._.push(toValue(token));
+        }
+      }
+      return args;
+    }
+    function runBlock(blockCode, currentItem) {
+      if (typeof blockCode !== "string" || blockCode[0] !== "{") {
+        throw new Error("\u041E\u0436\u0438\u0434\u0430\u043B\u0441\u044F \u0431\u043B\u043E\u043A { ... }.");
+      }
+      const prev = CUR;
+      CUR = currentItem;
+      try {
+        return runMultiline(blockCode.trim().slice(1, -1));
+      } finally {
+        CUR = prev;
+      }
+    }
+    function runMultiline(s) {
+      const out = [];
+      for (const part of splitBracketed(s, ";")) {
+        for (const line of splitBracketed(part, "\n")) {
+          out.push(...exec(line));
+        }
+      }
+      return out;
+    }
+    function coerceParamValue(typeName, value) {
+      if (value === void 0 || value === null || !typeName) return value;
+      const type = String(typeName).toLowerCase();
+      if (type === "int" || type === "long") return Number.isFinite(Number(value)) ? parseInt(Number(value), 10) : value;
+      if (type === "double" || type === "float" || type === "decimal") return Number(value);
+      if (type === "string") return String(value);
+      if (type === "bool") return !!value;
+      if (type === "array") return Array.isArray(value) ? value : [value];
+      return value;
+    }
+    function parseParamSpec(spec) {
+      const s = String(spec).trim();
+      if (!s) return null;
+      const match = s.match(/^(?:\[([^\]]+)\])?\s*(?:\$)?([A-Za-z_][\w]*)\s*(?:=\s*([\s\S]+))?$/);
+      if (!match) return { name: s.replace(/^\$?/, "").split("=")[0].trim().toLowerCase(), type: null, defaultValue: void 0 };
+      const [, type, name, defaultValue] = match;
+      return {
+        name: name.toLowerCase(),
+        type: type ? type.trim().toLowerCase() : null,
+        defaultValue: defaultValue !== void 0 ? evalExpr(defaultValue.trim()) : void 0
+      };
+    }
+    function callUserFunction(fnDef, args) {
+      const saved = {}, had = {}, names = [], pos = [];
+      let body = fnDef.b;
+      const pm = body.match(/^\s*param\s*\(([\s\S]*?)\)\s*;?\s*/i);
+      let params = (fnDef.params || fnDef.p || []).map((p) => typeof p === "string" ? { name: p, type: null, defaultValue: void 0 } : p);
+      if (pm) {
+        body = body.slice(pm[0].length);
+        params = splitBracketed(pm[1], ",").map(parseParamSpec).filter(Boolean);
+      }
+      params.forEach((p, i) => {
+        const name = p.name;
+        names.push(name);
+        had[name] = Object.prototype.hasOwnProperty.call(V, name);
+        saved[name] = V[name];
+        const value = args.n[name] !== void 0 ? args.n[name] : args._[i] !== void 0 ? args._[i] : p.defaultValue;
+        V[name] = coerceParamValue(p.type, value);
+      });
+      const used = new Set(params.map((p, i) => args.n[p.name] !== void 0 ? i : -1).filter((i) => i >= 0));
+      args._.forEach((v, i) => {
+        if (i >= params.length) pos.push(v);
+      });
+      const oldArgs = V.args, hadArgs = Object.prototype.hasOwnProperty.call(V, "args");
+      V.args = pos;
+      try {
+        return runMultiline(body);
+      } catch (e) {
+        if (e instanceof ReturnSignal) return e.value;
+        throw e;
+      } finally {
+        names.forEach((p) => {
+          if (had[p]) V[p] = saved[p];
+          else delete V[p];
+        });
+        if (hadArgs) V.args = oldArgs;
+        else delete V.args;
+      }
+    }
+    function runTry(line) {
+      const braceStart = line.indexOf("{");
+      const braceEnd = findClosingBracket(line, braceStart);
+      if (braceEnd < 0) throw new Error("\u041D\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0430 \u0441\u043A\u043E\u0431\u043A\u0430 } \u0432 \u0431\u043B\u043E\u043A\u0435 try.");
+      const tryBody = line.slice(braceStart + 1, braceEnd);
+      let rest = line.slice(braceEnd + 1).trim();
+      let catchBody = null, finallyBody = null;
+      function readBlock(word) {
+        const j = rest.indexOf("{");
+        if (j < 0) return null;
+        const k = findClosingBracket(rest, j);
+        if (k < 0) throw new Error("\u041D\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0430 \u0441\u043A\u043E\u0431\u043A\u0430 } \u0432 \u0431\u043B\u043E\u043A\u0435 " + word + ".");
+        const b = rest.slice(j + 1, k);
+        rest = rest.slice(k + 1).trim();
+        return b;
+      }
+      if (/^catch\b/i.test(rest)) catchBody = readBlock("catch");
+      if (/^finally\b/i.test(rest)) finallyBody = readBlock("finally");
+      if (catchBody === null && finallyBody === null) throw new Error("\u041F\u043E\u0441\u043B\u0435 try \u043D\u0443\u0436\u0435\u043D \u0431\u043B\u043E\u043A catch \u0438\u043B\u0438 finally.");
+      let output = [];
+      try {
+        try {
+          output = runMultiline(tryBody);
+        } catch (er) {
+          if (er instanceof ReturnSignal || catchBody === null) throw er;
+          CAUGHT = true;
+          const msg = er && er.message ? er.message : "\u041E\u0448\u0438\u0431\u043A\u0430";
+          const oldCur = CUR;
+          CUR = env.strObj(msg, { Message: msg, Exception: env.proxyWrap({ Message: msg }) });
+          try {
+            output = runMultiline(catchBody);
+          } finally {
+            CUR = oldCur;
+          }
+        }
+      } finally {
+        if (finallyBody !== null) output.push(...runMultiline(finallyBody));
+      }
+      return output;
+    }
+    function pipelineStage(s, input) {
+      const tokens = tokenize(s);
+      const name = tokens[0].toLowerCase();
+      if (FN[name]) {
+        return callUserFunction(FN[name], parseTokenValues(tokens));
+      }
+      const resolvedName = resolveAlias(name) || name;
+      const cmds = getCommands();
+      const cmdFn = cmds[resolvedName.toLowerCase()] || cmds[Object.keys(cmds).find((k) => k.toLowerCase() === name)];
+      if (cmdFn) {
+        const args = parseTokenValues(tokens);
+        const inp = input || [];
+        if (name === "where" || name === "?" || name === "where-object") {
+          const block = args._[0];
+          if (typeof block === "string" && block[0] === "{") {
+            return inp.filter((x) => {
+              const r2 = runBlock(block, x);
+              return r2.length && r2[r2.length - 1];
+            });
+          }
+          const prop = args._[0];
+          for (const op of ["eq", "ne", "gt", "lt", "ge", "le", "like", "match", "contains"]) {
+            if (args.n[op] !== void 0) {
+              return inp.filter((x) => {
+                const pv = x[prop];
+                const cmp = {
+                  eq: () => String(pv).toLowerCase() === String(args.n[op]).toLowerCase(),
+                  ne: () => String(pv).toLowerCase() !== String(args.n[op]).toLowerCase(),
+                  gt: () => pv > args.n[op],
+                  lt: () => pv < args.n[op],
+                  ge: () => pv >= args.n[op],
+                  le: () => pv <= args.n[op],
+                  like: () => comparisonOps.like(String(pv), args.n[op]),
+                  match: () => new RegExp(String(args.n[op]), "i").test(String(pv)),
+                  contains: () => [].concat(pv).includes(args.n[op])
+                };
+                return cmp[op] ? cmp[op]() : false;
+              });
+            }
+          }
+        }
+        if (name === "foreach" || name === "%" || name === "foreach-object") {
+          const block = args._[0] || args.n.process;
+          if (!block) throw new Error("ForEach-Object \u0442\u0440\u0435\u0431\u0443\u0435\u0442 \u0431\u043B\u043E\u043A, \u043D\u0430\u043F\u0440\u0438\u043C\u0435\u0440: ForEach-Object { $_.Name }");
+          return inp.flatMap((x) => runBlock(block, x));
+        }
+        return cmdFn(args, inp) || [];
+      }
+      if (input !== null) {
+        throw new Error(`\u0422\u0435\u0440\u043C\u0438\u043D "${tokens[0]}" \u043D\u0435 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u043D \u043A\u0430\u043A \u0438\u043C\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442\u0430, \u0444\u0443\u043D\u043A\u0446\u0438\u0438 \u0438\u043B\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B.`);
+      }
+      if (tokens.length > 1 && /^[A-Za-z_][\w-]*$/.test(tokens[0])) {
+        throw new Error(`\u0422\u0435\u0440\u043C\u0438\u043D "${tokens[0]}" \u043D\u0435 \u0440\u0430\u0441\u043F\u043E\u0437\u043D\u0430\u043D \u043A\u0430\u043A \u0438\u043C\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u043B\u0435\u0442\u0430, \u0444\u0443\u043D\u043A\u0446\u0438\u0438 \u0438\u043B\u0438 \u043F\u0440\u043E\u0433\u0440\u0430\u043C\u043C\u044B.`);
+      }
+      const r = evalExpr(s);
+      return r === void 0 ? [] : Array.isArray(r) ? r : [r];
+    }
+    function findMatchingPair(str, startIndex, openChar, closeChar) {
+      let depth2 = 0;
+      let quote = "";
+      for (let i = startIndex; i < str.length; i++) {
+        const ch = str[i];
+        if (quote) {
+          if (ch === quote) quote = "";
+          continue;
+        }
+        if (ch === '"' || ch === "'") {
+          quote = ch;
+          continue;
+        }
+        if (ch === openChar) depth2++;
+        else if (ch === closeChar) {
+          depth2--;
+          if (depth2 === 0) return i;
+        }
+      }
+      return -1;
+    }
+    function parseControlBlock(line, keyword) {
+      const startIndex = line.search(new RegExp(`\\b${keyword}\\b`, "i"));
+      if (startIndex < 0) return null;
+      const parenStart = line.indexOf("(", startIndex + keyword.length);
+      if (parenStart < 0) return null;
+      const parenEnd = findMatchingPair(line, parenStart, "(", ")");
+      if (parenEnd < 0) return null;
+      const braceStart = line.indexOf("{", parenEnd + 1);
+      if (braceStart < 0) return null;
+      const braceEnd = findClosingBracket(line, braceStart);
+      if (braceEnd < 0) throw new Error(`\u041D\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0430 \u0441\u043A\u043E\u0431\u043A\u0430 } \u0432 \u0431\u043B\u043E\u043A\u0435 ${keyword}.`);
+      return {
+        condition: line.slice(parenStart + 1, parenEnd).trim(),
+        body: line.slice(braceStart + 1, braceEnd),
+        rest: line.slice(braceEnd + 1).trim()
+      };
+    }
+    function readElseBranch(rest) {
+      const trimmed = rest.trim();
+      if (!trimmed || !/^else\b/i.test(trimmed)) return null;
+      const tail = trimmed.replace(/^else\b\s*/i, "").trim();
+      if (!tail) return null;
+      if (/^if\b/i.test(tail)) return { type: "if", value: tail };
+      const braceStart = tail.indexOf("{");
+      if (braceStart < 0) throw new Error("\u041F\u043E\u0441\u043B\u0435 else \u043E\u0436\u0438\u0434\u0430\u0435\u0442\u0441\u044F \u0431\u043B\u043E\u043A { ... }.");
+      const braceEnd = findClosingBracket(tail, braceStart);
+      if (braceEnd < 0) throw new Error("\u041D\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0430 \u0441\u043A\u043E\u0431\u043A\u0430 } \u0432 \u0431\u043B\u043E\u043A\u0435 else.");
+      return { type: "block", value: tail.slice(braceStart + 1, braceEnd) };
+    }
+    function exec(l) {
+      if (++depth > 200) throw new Error("\u041F\u0440\u0435\u0432\u044B\u0448\u0435\u043D\u0430 \u043C\u0430\u043A\u0441\u0438\u043C\u0430\u043B\u044C\u043D\u0430\u044F \u0433\u043B\u0443\u0431\u0438\u043D\u0430 \u0432\u043B\u043E\u0436\u0435\u043D\u043D\u043E\u0441\u0442\u0438 (200). \u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0440\u0435\u043A\u0443\u0440\u0441\u0438\u044E.");
+      try {
+        l = l.trim();
+        if (!l) return [];
+        let m;
+        if (/^function\b/i.test(l)) {
+          const fnMatch = l.match(/^function\s+([A-Za-z_][\w-]*)/i);
+          if (!fnMatch) throw new Error("\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u043E\u0435 \u043E\u0431\u044A\u044F\u0432\u043B\u0435\u043D\u0438\u0435 \u0444\u0443\u043D\u043A\u0446\u0438\u0438.");
+          const name = fnMatch[1];
+          const afterName = l.slice(fnMatch[0].length).trim();
+          let paramsText = "";
+          let bodyOffset = 0;
+          const openParen = afterName.indexOf("(");
+          if (openParen === 0) {
+            const closeParen = findMatchingPair(afterName, openParen, "(", ")");
+            if (closeParen < 0) throw new Error("\u041D\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0430 \u0441\u043A\u043E\u0431\u043A\u0430 ) \u0432 \u043E\u0431\u044A\u044F\u0432\u043B\u0435\u043D\u0438\u0438 \u0444\u0443\u043D\u043A\u0446\u0438\u0438.");
+            paramsText = afterName.slice(openParen + 1, closeParen);
+            bodyOffset = closeParen + 1;
+          }
+          const braceStart = afterName.indexOf("{", bodyOffset);
+          if (braceStart < 0) throw new Error("\u041D\u0435 \u043D\u0430\u0439\u0434\u0435\u043D \u0431\u043B\u043E\u043A { ... } \u0432 \u0444\u0443\u043D\u043A\u0446\u0438\u0438.");
+          const braceEnd = findClosingBracket(afterName, braceStart);
+          if (braceEnd < 0) throw new Error("\u041D\u0435 \u0437\u0430\u043A\u0440\u044B\u0442\u0430 \u0441\u043A\u043E\u0431\u043A\u0430 } \u0432 \u0444\u0443\u043D\u043A\u0446\u0438\u0438.");
+          const body = afterName.slice(braceStart + 1, braceEnd);
+          const rawParams = paramsText ? paramsText.split(",").map((x) => x.trim()).filter(Boolean) : [];
+          const parsedParams = rawParams.map(parseParamSpec).filter(Boolean);
+          FN[name.toLowerCase()] = {
+            p: parsedParams.map((p) => p.name),
+            params: parsedParams,
+            b: body
+          };
+          return [];
+        }
+        if (/^try\s*\{/i.test(l)) return runTry(l);
+        if (m = l.match(/^throw\s+([\s\S]+)$/i)) throw new Error(String(evalExpr(m[1])));
+        if (m = l.match(/^return(?:\s+([\s\S]+))?$/i)) {
+          const r = m[1] ? exec(m[1]) : [];
+          throw new ReturnSignal(r);
+        }
+        if (/^while\b/i.test(l)) {
+          const block = parseControlBlock(l, "while");
+          if (!block) throw new Error("\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0441\u0438\u043D\u0442\u0430\u043A\u0441\u0438\u0441 while.");
+          const out = [];
+          let n = 0;
+          while (evalExpr(block.condition)) {
+            if (++n > 1e4) throw new Error("\u041F\u0440\u0435\u0432\u044B\u0448\u0435\u043D \u043B\u0438\u043C\u0438\u0442 \u0438\u0442\u0435\u0440\u0430\u0446\u0438\u0439 while (10 000). \u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u0435 \u0446\u0438\u043A\u043B\u0430.");
+            out.push(...runMultiline(block.body));
+          }
+          return out;
+        }
+        if (/^for\b/i.test(l)) {
+          const block = parseControlBlock(l, "for");
+          if (!block) throw new Error("\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0441\u0438\u043D\u0442\u0430\u043A\u0441\u0438\u0441 for.");
+          const out = [];
+          const parts = splitBracketed(block.condition, ";");
+          const init = parts[0] ? parts[0].trim() : "";
+          const cond = parts[1] ? parts[1].trim() : "";
+          const step = parts[2] ? parts[2].trim() : "";
+          if (init) exec(init);
+          let n = 0;
+          while (!cond || evalExpr(cond)) {
+            if (++n > 1e4) throw new Error("\u041F\u0440\u0435\u0432\u044B\u0448\u0435\u043D \u043B\u0438\u043C\u0438\u0442 \u0438\u0442\u0435\u0440\u0430\u0446\u0438\u0439 for (10 000). \u041F\u0440\u043E\u0432\u0435\u0440\u044C\u0442\u0435 \u0443\u0441\u043B\u043E\u0432\u0438\u0435 \u0446\u0438\u043A\u043B\u0430.");
+            out.push(...runMultiline(block.body));
+            if (step) exec(step);
+          }
+          return out;
+        }
+        if (/^foreach\b/i.test(l)) {
+          const block = parseControlBlock(l, "foreach");
+          if (!block) throw new Error("\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0441\u0438\u043D\u0442\u0430\u043A\u0441\u0438\u0441 foreach.");
+          const condition = block.condition.trim();
+          const inIndex = condition.search(/\s+in\s+/i);
+          if (inIndex < 0) throw new Error('\u0412 foreach \u043E\u0436\u0438\u0434\u0430\u0435\u0442\u0441\u044F \u0432\u044B\u0440\u0430\u0436\u0435\u043D\u0438\u0435 "in".');
+          const variable = condition.slice(0, inIndex).trim().replace(/^\$/, "").toLowerCase();
+          const source = condition.slice(inIndex + 3).trim();
+          const out = [];
+          for (const x of exec(source)) {
+            V[variable] = x;
+            out.push(...runMultiline(block.body));
+          }
+          return out;
+        }
+        if (/^if\b/i.test(l)) {
+          const block = parseControlBlock(l, "if");
+          if (!block) throw new Error("\u041D\u0435\u043A\u043E\u0440\u0440\u0435\u043A\u0442\u043D\u044B\u0439 \u0441\u0438\u043D\u0442\u0430\u043A\u0441\u0438\u0441 if.");
+          const conditionResult = !!evalExpr(block.condition);
+          const elseBranch = readElseBranch(block.rest);
+          if (conditionResult) {
+            const out = runMultiline(block.body);
+            if (!elseBranch) return out;
+            return out;
+          }
+          if (!elseBranch) return [];
+          if (elseBranch.type === "if") return exec(elseBranch.value);
+          return runMultiline(elseBranch.value);
+        }
+        if (m = l.match(/^\$(\w+)\s*(\+\+|--|\+=|-=|\*=|\/=)\s*([\s\S]*)$/)) {
+          const k = m[1].toLowerCase(), op = m[2];
+          const old = Number(V[k] ?? 0);
+          const delta = m[3].trim() ? Number(evalExpr(m[3])) : 1;
+          const ops = { "++": () => old + 1, "--": () => old - 1, "+=": () => old + delta, "-=": () => old - delta, "*=": () => old * delta, "/=": () => old / delta };
+          V[k] = ops[op] ? ops[op]() : old;
+          return [];
+        }
+        if (m = l.match(/^\$(\w+)\s*=\s*([^=][\s\S]*)$/)) {
+          const r = exec(m[2]);
+          V[m[1].toLowerCase()] = r.length === 1 ? r[0] : r;
+          return [];
+        }
+        let d = null;
+        for (const s of splitBracketed(l, "|")) {
+          if (s.trim()) d = pipelineStage(s.trim(), d);
+        }
+        return d || [];
+      } finally {
+        depth--;
+      }
+    }
+    function run(command) {
+      CAUGHT = false;
+      const results = runMultiline(command);
+      return results;
+    }
+    function wasCaught() {
+      return CAUGHT;
+    }
+    function getVars() {
+      return V;
+    }
+    function getFns() {
+      return FN;
+    }
+    function reset() {
+      for (const k of Object.keys(V)) delete V[k];
+      for (const k of Object.keys(FN)) delete FN[k];
+      CUR = null;
+      CAUGHT = false;
+      depth = 0;
+    }
+    return {
+      run,
+      wasCaught,
+      getVars,
+      getFns,
+      reset,
+      getV: () => V,
+      getFN: () => FN
+    };
+  }
+
+  // js/simulator/processes.js
+  function createProcesses() {
+    const data = [
+      ["svchost", 812, 12.4, 48],
+      ["chrome", 4120, 356.2, 612],
+      ["explorer", 2210, 88.7, 140],
+      ["powershell", 5012, 3.1, 72],
+      ["lsass", 712, 9.8, 22],
+      ["MsMpEng", 3340, 210.5, 260],
+      ["spoolsv", 1544, 1.2, 18],
+      ["updater", 6666, 70.2, 35]
+    ];
+    return data.map(([Name, Id, CPU, WS]) => proxyWrap({ Name, Id, CPU, WS }));
+  }
+
+  // js/simulator/services.js
+  function createServices() {
+    const data = [
+      ["Spooler", "Running", "Print Spooler", "Automatic"],
+      ["WinDefend", "Running", "Microsoft Defender", "Automatic"],
+      ["EventLog", "Running", "Windows Event Log", "Automatic"],
+      ["TermService", "Running", "Remote Desktop", "Automatic"],
+      ["wuauserv", "Stopped", "Windows Update", "Manual"],
+      ["RemoteRegistry", "Stopped", "Remote Registry", "Disabled"]
+    ];
+    return data.map(
+      ([Name, Status, DisplayName, StartType]) => proxyWrap({ Name, Status, DisplayName, StartType })
+    );
+  }
+
+  // js/simulator/users.js
+  function createUsers() {
+    const data = [
+      ["Admin", true, "\u0441\u0435\u0433\u043E\u0434\u043D\u044F", "\u0410\u0434\u043C\u0438\u043D\u0438\u0441\u0442\u0440\u0430\u0442\u043E\u0440"],
+      ["Guest", false, "\u043D\u0438\u043A\u043E\u0433\u0434\u0430", "\u0413\u043E\u0441\u0442\u0435\u0432\u0430\u044F \u0437\u0430\u043F\u0438\u0441\u044C"],
+      ["svc_backup", true, "3 \u0434\u043D\u044F \u043D\u0430\u0437\u0430\u0434", "\u0421\u043B\u0443\u0436\u0431\u0430 \u0440\u0435\u0437\u0435\u0440\u0432\u043D\u043E\u0433\u043E \u043A\u043E\u043F\u0438\u0440\u043E\u0432\u0430\u043D\u0438\u044F"],
+      ["j.ivanov", true, "\u0432\u0447\u0435\u0440\u0430", "\u0418\u0432\u0430\u043D\u043E\u0432 \u0418."],
+      ["tempuser", false, "90 \u0434\u043D\u0435\u0439 \u043D\u0430\u0437\u0430\u0434", "\u0412\u0440\u0435\u043C\u0435\u043D\u043D\u0430\u044F"]
+    ];
+    return data.map(
+      ([Name, Enabled, LastLogon, Description]) => proxyWrap({ Name, Enabled, LastLogon, Description })
+    );
+  }
+
+  // js/simulator/events-log.js
+  var MSG = {
+    4624: "\u0423\u0441\u043F\u0435\u0448\u043D\u044B\u0439 \u0432\u0445\u043E\u0434",
+    4625: "\u041D\u0435\u0443\u0434\u0430\u0447\u043D\u044B\u0439 \u0432\u0445\u043E\u0434",
+    4688: "\u0421\u043E\u0437\u0434\u0430\u043D \u043F\u0440\u043E\u0446\u0435\u0441\u0441",
+    4672: "\u041E\u0441\u043E\u0431\u044B\u0435 \u043F\u0440\u0438\u0432\u0438\u043B\u0435\u0433\u0438\u0438",
+    7045: "\u0423\u0441\u0442\u0430\u043D\u043E\u0432\u043B\u0435\u043D\u0430 \u0441\u043B\u0443\u0436\u0431\u0430"
+  };
+  function createEvents() {
+    const ids = [4624, 4625, 4625, 4688, 4625, 4672, 7045, 4625, 4624, 4625];
+    return ids.map((Id, n) => proxyWrap({
+      Time: "10:0" + n,
+      Id,
+      Level: Id === 4625 ? "Warning" : "Information",
+      Message: MSG[Id]
+    }));
+  }
+
+  // js/simulator/network.js
+  function createNetworkConnections() {
+    const data = [
+      ["192.168.1.15", 50122, "93.184.216.34", 443, "Established", 4120],
+      ["192.168.1.15", 50301, "185.220.101.5", 4444, "Established", 6666],
+      ["0.0.0.0", 3389, "0.0.0.0", 0, "Listen", 1544],
+      ["0.0.0.0", 445, "0.0.0.0", 0, "Listen", 4]
+    ];
+    return data.map(
+      ([LocalAddress, LocalPort, RemoteAddress, RemotePort, State, OwningProcess]) => proxyWrap({ LocalAddress, LocalPort, RemoteAddress, RemotePort, State, OwningProcess })
+    );
+  }
+
+  // js/laboratory/history.js
+  function createHistory() {
+    const commands = [];
+    let pos = 0;
+    return {
+      push(cmd) {
+        if (cmd === commands[commands.length - 1]) return;
+        commands.push(cmd);
+        pos = commands.length;
+      },
+      prev() {
+        if (pos > 0) {
+          pos--;
+          return commands[pos] || "";
+        }
+        return "";
+      },
+      next() {
+        if (pos < commands.length) {
+          pos++;
+          return commands[pos] || "";
+        }
+        pos = commands.length;
+        return "";
+      },
+      all() {
+        return [...commands];
+      },
+      reset() {
+        commands.length = 0;
+        pos = 0;
+      }
+    };
+  }
+
+  // js/laboratory/terminal.js
+  function createTerminal(options) {
+    const { outputEl, inputEl, promptEl, onAfterExec } = options;
+    let procs = createProcesses();
+    let svcs = createServices();
+    let users = createUsers();
+    let events = createEvents();
+    let net = createNetworkConnections();
+    let fsRoot = createFilesystem();
+    let cwd = ["C:", "Users", "Admin"];
+    const MAX_OUTPUT_NODES = 5e3;
+    function out(text, cssClass) {
+      const div = document.createElement("div");
+      div.className = cssClass || "";
+      div.textContent = text;
+      outputEl.append(div);
+      outputEl.scrollTop = outputEl.scrollHeight;
+      if (outputEl.childElementCount > MAX_OUTPUT_NODES) {
+        while (outputEl.childElementCount > MAX_OUTPUT_NODES / 2) {
+          outputEl.removeChild(outputEl.firstChild);
+        }
+        const trimDiv = document.createElement("div");
+        trimDiv.className = "er";
+        trimDiv.textContent = "\u2026 \u0432\u044B\u0432\u043E\u0434 \u043E\u0431\u0440\u0435\u0437\u0430\u043D (\u0431\u043E\u043B\u0435\u0435 5000 \u0441\u0442\u0440\u043E\u043A)";
+        outputEl.insertBefore(trimDiv, outputEl.firstChild);
+      }
+    }
+    initCommands(procs, svcs, users, events, net, fsRoot, cwd, proxyWrap, out);
+    const interp = createInterpreter({
+      proxyWrap,
+      strObj(s, props) {
+        const o = {};
+        Object.defineProperties(o, {
+          __s: { value: s },
+          toString: { value: () => s }
+        });
+        for (const k in props) Object.defineProperty(o, k, { value: props[k] });
+        return proxyWrap(o);
+      }
+    });
+    const history = createHistory();
+    function updatePrompt() {
+      if (promptEl) {
+        promptEl.textContent = "PS " + pathToString(cwd) + ">";
+      }
+    }
+    function exec(line) {
+      line = line.trim();
+      if (!line) return;
+      out((promptEl ? promptEl.textContent : "PS>") + " " + line, "cm");
+      history.push(line);
+      try {
+        const commandName = line.split(/\s+/)[0].toLowerCase();
+        if (["clear-host", "cls", "clear"].includes(commandName)) {
+          clearOutput();
+          if (onAfterExec) {
+            onAfterExec(line, history.all(), "", []);
+          }
+          return;
+        }
+        const results = interp.run(line);
+        const text = formatOutput(results, proxyWrap);
+        if (text) out(text);
+        if (onAfterExec) {
+          onAfterExec(line, history.all(), text, results);
+        }
+      } catch (e) {
+        const msg = e instanceof RangeError ? "\u0421\u043B\u0438\u0448\u043A\u043E\u043C \u0433\u043B\u0443\u0431\u043E\u043A\u0430\u044F \u0440\u0435\u043A\u0443\u0440\u0441\u0438\u044F \u0438\u043B\u0438 \u0441\u043B\u0438\u0448\u043A\u043E\u043C \u0431\u043E\u043B\u044C\u0448\u043E\u0439 \u043E\u0431\u044A\u0451\u043C \u0434\u0430\u043D\u043D\u044B\u0445." : e && e.message ? e.message : "\u041E\u0448\u0438\u0431\u043A\u0430 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u0438\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u044B";
+        out(msg, "er");
+      }
+      updatePrompt();
+    }
+    if (inputEl) {
+      inputEl.onkeydown = (e) => {
+        if (e.key === "Enter") {
+          exec(inputEl.value);
+          inputEl.value = "";
+        } else if (e.key === "ArrowUp") {
+          inputEl.value = history.prev();
+          e.preventDefault();
+        } else if (e.key === "ArrowDown") {
+          inputEl.value = history.next();
+        } else if (e.key === "l" && e.ctrlKey) {
+          outputEl.innerHTML = "";
+          e.preventDefault();
+        }
+      };
+    }
+    function clearOutput() {
+      outputEl.innerHTML = "";
+    }
+    function resetLab() {
+      procs = createProcesses();
+      svcs = createServices();
+      users = createUsers();
+      events = createEvents();
+      net = createNetworkConnections();
+      fsRoot = createFilesystem();
+      cwd = ["C:", "Users", "Admin"];
+      resetExecutionPolicy();
+      interp.reset();
+      history.reset();
+      clearOutput();
+      updatePrompt();
+      initCommands(procs, svcs, users, events, net, fsRoot, cwd, proxyWrap, out);
+    }
+    updatePrompt();
+    return {
+      exec,
+      clearOutput,
+      resetLab,
+      updatePrompt,
+      getHistory: () => history.all(),
+      getInterp: () => interp,
+      getEnv: () => ({ procs, svcs, users, events, net, fsRoot, cwd, getExecutionPolicy: () => getExecutionPolicy() }),
+      out
+    };
+  }
+
+  // js/laboratory/task-checker.js
+  var LS = flattenLessons();
+  function checkTask(lessonIndex, history, outText, result, interp, env) {
+    if (lessonIndex < 0 || lessonIndex >= LS.length) {
+      return { passed: false, message: "\u041D\u0435\u0442 \u0442\u0430\u043A\u043E\u0433\u043E \u0437\u0430\u0434\u0430\u043D\u0438\u044F." };
+    }
+    const lastCmd = history.length ? history[history.length - 1].toLowerCase() : "";
+    const historyText = history.join("\n");
+    const has = (re) => re.test(historyText);
+    const lastHas = (re) => re.test(lastCmd);
+    const V = interp.getVars();
+    const FN = interp.getFns();
+    const checks = [
+      // 0: Командлеты и справка
+      () => lastHas(/get-help\s+get-service/) && /Get-Service|служб/i.test(outText),
+      // 1: Конвейер и объекты
+      () => lastHas(/select(-object)?\b.*-first\s+3/) && result.length === 3 && result.every((x) => x && x.CPU !== void 0) && result.every((x, j, a) => !j || a[j - 1].CPU >= x.CPU),
+      // 2: Фильтрация
+      () => lastHas(/where(-object)?/) && result.length > 0 && result.every((x) => Number(x.CPU) > 50),
+      // 3: Переменные и массивы
+      () => has(/\$svc\s*=.*get-service/i) && Array.isArray(V.svc) && V.svc.every((x) => x.Status === "Running") && lastHas(/\$svc\.count/i) && Number(outText.trim()) === V.svc.length,
+      // 4: Файлы и папки
+      () => has(/(set-content|sc)\s+hello\.txt/i) && lastHas(/(get-content|cat|type|gc)\s+hello\.txt/i) && outText.trim().length > 0,
+      // 5: Условия и циклы
+      () => lastHas(/foreach\s*\(\s*\$\w+\s+in\s+1\.\.5/i) && result.map(String).join(",") === "1,2,3,4,5",
+      // 6: Поиск по тексту и логам
+      () => lastHas(/select-string/i) && /ERROR/i.test(outText) && outText.split("\n").filter((x) => /ERROR/i.test(x)).length >= 2,
+      // 7: Службы и процессы
+      () => has(/stop-service\s+(-name\s+)?spooler/i) && lastHas(/get-service/i) && env.svcs.find((x) => x.Name === "Spooler")?.Status === "Stopped" && result.some((x) => x.Status === "Stopped"),
+      // 8: Учётные записи
+      () => lastHas(/get-localuser/) && result.length > 0 && result.every((x) => x.Enabled === true),
+      // 9: Журналы событий
+      () => lastHas(/measure(-object)?/) && result.length === 1 && Number(result[0].Count) >= 1 && has(/4625/i),
+      // 10: Хэш-таблицы
+      () => has(/\$h\s*=\s*@\{/i) && V.h && V.h.Host !== void 0 && V.h.Port !== void 0 && lastHas(/\$h(\.port|\[["']port["']\])/i) && outText.trim() === String(V.h.Port),
+      // 11: Функции
+      () => Object.keys(FN).some((n) => {
+        const name = n.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+        return new RegExp("function\\s+" + name + "\\b|\\b" + name + "\\s*\\(", "i").test(historyText);
+      }) && lastHas(/^[a-z_][\w-]*(?:\s|$)/i) && outText.trim().length > 0 && result.length > 0,
+      // 12: Обработка ошибок
+      () => interp.wasCaught() && /^try\s*\{/i.test(lastCmd) && /catch/i.test(lastCmd) && outText.trim().length > 0,
+      // 13: Подозрительные соединения
+      () => lastHas(/get-process\s+-id/) && result.some((x) => x.Id === 6666) && has(/4444/),
+      // 14: Целостность и политики
+      () => has(/get-filehash/i) && lastHas(/get-executionpolicy/i) && outText.trim() === env.getExecutionPolicy(),
+      // 15: Поиск секретов
+      () => lastHas(/select-string/i) && /password/i.test(outText) && /get-childitem[\s\S]*recurse[\s\S]*select-string/i.test(historyText)
+    ];
+    let passed = false;
+    try {
+      passed = !!checks[lessonIndex] && checks[lessonIndex]();
+    } catch (e) {
+      passed = false;
+    }
+    if (passed) {
+      return { passed: true, message: "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E \u2713" };
+    }
+    const lesson = LS[lessonIndex];
+    if (lesson && lesson.h) {
+      return { passed: false, message: "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435: " + lesson.h };
+    }
+    return { passed: false, message: "\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0434\u0440\u0443\u0433\u0443\u044E \u043A\u043E\u043C\u0430\u043D\u0434\u0443." };
+  }
+
+  // js/app.js
+  var LS2 = flattenLessons();
+  var TOTAL_LESSONS = LS2.length;
+
+  // js/pages/common.js
+  var $ = (s) => document.querySelector(s);
+  var esc = (s) => String(s).replace(/[&<>"]/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" })[c]);
+  function initPage() {
+    initState();
+    document.querySelectorAll("[data-go]").forEach((b) => {
+      b.onclick = () => {
+        location.href = b.dataset.go;
+      };
+    });
+    refreshHeader();
+  }
+  function refreshHeader() {
+    const bar = $("#bar");
+    if (bar) bar.style.width = progressPercent(TOTAL_LESSONS) + "%";
+    const pc = $("#pc");
+    if (pc) pc.textContent = completedCount() + " / " + TOTAL_LESSONS;
+  }
+
+  // js/pages/course.js
+  initPage();
+  var hdr = document.querySelector("header");
+  var rs = document.createElement("button");
+  rs.className = "gh";
+  rs.id = "rs";
+  rs.textContent = "\u0421\u0431\u0440\u043E\u0441";
+  hdr.append(rs);
+  var cur = getCurrentLesson();
+  var start = 0;
+  var term = createTerminal({
+    outputEl: $("#o"),
+    inputEl: $("#in"),
+    promptEl: $("#ps"),
+    onAfterExec(line, hist, text, results) {
+      const r = checkTask(cur, hist.slice(start), text, results, term.getInterp(), term.getEnv());
+      if (r.passed && !isLessonCompleted(cur)) {
+        markLessonCompleted(cur);
+        const tk = $("#tk");
+        if (tk) tk.classList.add("ok");
+        renderNav();
+        refreshHeader();
+        showToast(completedCount() === TOTAL_LESSONS ? "\u041A\u0443\u0440\u0441 \u043F\u0440\u043E\u0439\u0434\u0435\u043D! \u{1F389}" : "\u0417\u0430\u0434\u0430\u043D\u0438\u0435 \u0432\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E \u2713");
+      }
+    }
+  });
+  function renderNav() {
+    let k = 0;
+    $("#nv").innerHTML = courseModules.map((m) => "<h4>" + esc(m.name) + " <span>" + esc(m.level) + "</span></h4>" + m.lessons.map((l) => {
+      const i = k++, done = isLessonCompleted(i);
+      return '<button data-i="' + i + '" class="' + (done ? "d " : "") + (i === cur ? "on" : "") + '"><b>' + (done ? "\u2713" : i + 1) + "</b>" + esc(l.t) + "</button>";
+    }).join("")).join("") + '<div class="pages"><a href="index.html">\u0413\u043B\u0430\u0432\u043D\u0430\u044F</a><a href="progress.html">\u041F\u0440\u043E\u0433\u0440\u0435\u0441\u0441</a><a href="about.html">\u041E \u043F\u0440\u043E\u0435\u043A\u0442\u0435</a></div>';
+  }
+  function show(i) {
+    cur = Math.min(Math.max(i, 0), LS2.length - 1);
+    setCurrentLesson(cur);
+    start = term.getHistory().length;
+    const l = LS2[cur];
+    $("#ls").innerHTML = '<div class="bd">' + esc(l.level) + " \xB7 " + esc(l.module) + "</div><h1>" + esc(l.t) + "</h1><div>" + l.th + "</div><h3>\u041F\u043E\u043F\u0440\u043E\u0431\u0443\u0439\u0442\u0435 \u0432 \u0442\u0435\u0440\u043C\u0438\u043D\u0430\u043B\u0435</h3>" + l.ex.map((e, k) => '<button class="ch" data-k="' + k + '">' + esc(e) + "</button>").join("") + '<div class="task' + (isLessonCompleted(cur) ? " ok" : "") + '" id="tk"><div class="st">\u2713 \u0412\u044B\u043F\u043E\u043B\u043D\u0435\u043D\u043E</div><b>\u0417\u0430\u0434\u0430\u043D\u0438\u0435</b><p>' + esc(l.task) + '</p><button id="hn" aria-expanded="false">\u041F\u043E\u043A\u0430\u0437\u0430\u0442\u044C \u0440\u0435\u0448\u0435\u043D\u0438\u0435</button><pre id="hi" hidden>' + esc(l.h) + '</pre></div><div class="nv"><button id="pv"' + (cur ? "" : " disabled") + '>\u2190 \u041D\u0430\u0437\u0430\u0434</button><button class="pr" id="nx"' + (cur < LS2.length - 1 ? "" : " disabled") + ">\u0414\u0430\u043B\u0435\u0435 \u2192</button></div>";
+    $("#hn").onclick = () => {
+      const h = $("#hi");
+      h.hidden = !h.hidden;
+      $("#hn").setAttribute("aria-expanded", String(!h.hidden));
+    };
+    $("#pv").onclick = () => show(cur - 1);
+    $("#nx").onclick = () => show(cur + 1);
+    $("#ls").scrollTop = 0;
+    window.scrollTo(0, 0);
+    renderNav();
+    refreshHeader();
+    closeDrawer();
+  }
+  function closeDrawer() {
+    $("#nv").classList.remove("open");
+    $("#mn").setAttribute("aria-expanded", "false");
+  }
+  $("#ls").onclick = (e) => {
+    const b = e.target.closest(".ch");
+    if (!b) return;
+    term.exec(LS2[cur].ex[b.dataset.k]);
+    if (innerWidth < 1e3) $("#tm").scrollIntoView({ behavior: "smooth" });
+  };
+  $("#nv").onclick = (e) => {
+    const b = e.target.closest("button[data-i]");
+    if (b) show(+b.dataset.i);
+  };
+  $("#mn").onclick = () => {
+    const o = $("#nv").classList.toggle("open");
+    $("#mn").setAttribute("aria-expanded", String(o));
+  };
+  $("#cl").onclick = () => term.clearOutput();
+  $("#tm").onclick = () => {
+    if (!getSelection().toString()) $("#in").focus({ preventScroll: true });
+  };
+  var timer = 0;
+  rs.onclick = () => {
+    if (!timer) {
+      rs.textContent = "\u0422\u043E\u0447\u043D\u043E?";
+      timer = setTimeout(() => {
+        timer = 0;
+        rs.textContent = "\u0421\u0431\u0440\u043E\u0441";
+      }, 3e3);
+      return;
+    }
+    clearTimeout(timer);
+    timer = 0;
+    rs.textContent = "\u0421\u0431\u0440\u043E\u0441";
+    resetProgress();
+    term.resetLab();
+    show(0);
+  };
+  term.out("PShell 4All \u2014 \u0443\u0447\u0435\u0431\u043D\u0430\u044F \u043A\u043E\u043D\u0441\u043E\u043B\u044C. \u042D\u0442\u043E \u0431\u0435\u0437\u043E\u043F\u0430\u0441\u043D\u044B\u0439 \u0441\u0438\u043C\u0443\u043B\u044F\u0442\u043E\u0440: \u043D\u0438\u0447\u0435\u0433\u043E \u043D\u0435 \u0437\u0430\u0442\u0440\u0430\u0433\u0438\u0432\u0430\u0435\u0442 \u0432\u0430\u0448 \u043A\u043E\u043C\u043F\u044C\u044E\u0442\u0435\u0440.\n\u041D\u0430\u0447\u043D\u0438\u0442\u0435 \u0441 Get-Command, \u0441\u0442\u0440\u0435\u043B\u043A\u0430 \u0432\u0432\u0435\u0440\u0445 \u2014 \u043F\u0440\u0435\u0434\u044B\u0434\u0443\u0449\u0430\u044F \u043A\u043E\u043C\u0430\u043D\u0434\u0430.\n", "sy");
+  var fromHash = parseInt(location.hash.slice(1), 10);
+  show(fromHash >= 1 && fromHash <= LS2.length ? fromHash - 1 : cur);
+})();
