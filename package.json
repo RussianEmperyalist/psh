@@ -5,9 +5,11 @@
   "private": true,
   "scripts": {
     "start": "npx --yes http-server . -p 8000 -c-1 -o",
-    "build": "esbuild js/pages/course.js js/pages/home.js js/pages/progress.js js/pages/about.js --bundle --format=iife --outdir=js/bundles"
+    "build": "esbuild js/pages/course.js js/pages/home.js js/pages/progress.js js/pages/about.js --bundle --format=iife --outdir=js/bundles",
+    "test": "node --test"
   },
   "devDependencies": {
     "esbuild": "^0.28.2"
-  }
+  },
+  "type": "module"
 }
